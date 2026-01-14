@@ -21,6 +21,10 @@ import { FAQ } from './sections/FAQ';
 import { FormationsPage } from './pages/FormationsPage';
 import { ContactPage } from './pages/ContactPage';
 import { RealisationsPage } from './pages/RealisationsPage';
+import { AboutPage } from './pages/AboutPage';
+import { LegalMentionsPage } from './pages/LegalMentionsPage';
+import { CGVPage } from './pages/CGVPage';
+import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -56,6 +60,10 @@ const App: React.FC = () => {
             <Route path="/formations" element={<FormationsPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/realisations" element={<RealisationsPage />} />
+            <Route path="/a-propos" element={<AboutPage />} />
+            <Route path="/mentions-legales" element={<LegalMentionsPage />} />
+            <Route path="/cgv" element={<CGVPage />} />
+            <Route path="/confidentialite" element={<PrivacyPolicyPage />} />
           </Routes>
         </main>
 

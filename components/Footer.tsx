@@ -36,6 +36,7 @@ export const Footer: React.FC = () => {
              <h4 className="text-[10px] font-black uppercase tracking-[0.4em] mb-8 text-white/30">Navigation</h4>
              <div className="flex flex-col gap-4 text-sm font-bold text-white/60">
                 <Link to="/" className="hover:text-[#16C60C] transition-colors">Accueil</Link>
+                <Link to="/a-propos" className="hover:text-[#16C60C] transition-colors">À Propos</Link>
                 <Link to="/realisations" className="hover:text-[#16C60C] transition-colors">Réalisations</Link>
                 <Link to="/formations" className="hover:text-[#16C60C] transition-colors">Formations</Link>
                 <Link to="/contact" className="hover:text-[#16C60C] transition-colors">Contact</Link>
@@ -45,9 +46,9 @@ export const Footer: React.FC = () => {
           <div>
              <h4 className="text-[10px] font-black uppercase tracking-[0.4em] mb-8 text-white/30">Légal</h4>
              <div className="flex flex-col gap-4 text-sm font-bold text-white/60">
-                <a href="#" className="hover:text-[#16C60C] transition-colors">Mentions Légales</a>
-                <a href="#" className="hover:text-[#16C60C] transition-colors">CGV</a>
-                <a href="#" className="hover:text-[#16C60C] transition-colors">Confidentialité</a>
+                <Link to="/mentions-legales" className="hover:text-[#16C60C] transition-colors">Mentions Légales</Link>
+                <Link to="/cgv" className="hover:text-[#16C60C] transition-colors">CGV</Link>
+                <Link to="/confidentialite" className="hover:text-[#16C60C] transition-colors">Confidentialité</Link>
              </div>
           </div>
         </div>
