@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { GraduationCap, ArrowRight } from 'lucide-react';
 import { CONFIG } from '../config';
 
 export const FormationsPage: React.FC = () => {
@@ -12,7 +12,7 @@ export const FormationsPage: React.FC = () => {
            <motion.div
              initial={{ opacity: 0, scale: 0.9 }}
              animate={{ opacity: 1, scale: 1 }}
-             className="w-20 h-20 rounded-3xl bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] mx-auto mb-10"
+             className="w-20 h-20 rounded-3xl bg-[#16C60C]/10 flex items-center justify-center text-[#16C60C] mx-auto mb-10"
            >
               <GraduationCap size={40} />
            </motion.div>
@@ -27,11 +27,11 @@ export const FormationsPage: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
-              className="glass p-12 rounded-[4rem] border-white/5 hover:border-[#D4AF37]/40 transition-all flex flex-col"
+              className="glass p-12 rounded-[4rem] border-white/5 hover:border-[#16C60C]/40 transition-all flex flex-col"
             >
               <div className="flex gap-2 mb-8">
                  {f.tags.map(t => (
-                   <span key={t} className="text-[9px] font-black uppercase tracking-widest px-3 py-1 bg-white/5 text-[#D4AF37] rounded-full border border-[#D4AF37]/20">{t}</span>
+                   <span key={t} className="text-[9px] font-black uppercase tracking-widest px-3 py-1 bg-white/5 text-[#16C60C] rounded-full border border-[#16C60C]/20">{t}</span>
                  ))}
               </div>
               <h3 className="text-3xl font-black mb-6 uppercase tracking-tighter leading-none">{f.title}</h3>
@@ -43,8 +43,8 @@ export const FormationsPage: React.FC = () => {
               </div>
 
               <a
-                href={`https://wa.me/${CONFIG.contact.whatsapp}?text=Salut Nümtema, je veux en savoir plus sur la formation ${f.title}.`}
-                className="w-full py-5 rounded-2xl bg-[#D4AF37] text-black font-black text-xs uppercase tracking-widest text-center flex items-center justify-center gap-3 hover:bg-white transition-all shadow-xl shadow-[#D4AF37]/10"
+                href={`https://wa.me/${CONFIG.contact.whatsapp}?text=Salut Lionel, je veux en savoir plus sur la formation ${f.title}.`}
+                className="w-full py-5 rounded-2xl bg-[#16C60C] text-white font-black text-xs uppercase tracking-widest text-center flex items-center justify-center gap-3 hover:bg-white hover:text-black transition-all shadow-xl shadow-[#16C60C]/10"
               >
                 S'inscrire / WhatsApp <ArrowRight size={16} />
               </a>
@@ -52,12 +52,12 @@ export const FormationsPage: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-32 p-16 rounded-[4rem] glass border-dashed border-[#D4AF37]/40 text-center">
+        <div className="mt-32 p-16 rounded-[4rem] glass border-dashed border-[#16C60C]/40 text-center">
            <h3 className="text-3xl font-black mb-6 uppercase tracking-tight">Une formation sur-mesure ?</h3>
            <p className="text-white/50 font-medium text-lg mb-10">Tout se discute. On peut adapter le programme selon votre niveau et vos objectifs business.</p>
            <button 
-              onClick={() => window.location.href = '#/contact'}
-              className="px-12 py-6 glass rounded-2xl font-black text-sm uppercase tracking-widest hover:border-[#D4AF37] transition-all"
+              onClick={() => window.location.hash = '#/contact'}
+              className="px-12 py-6 glass rounded-2xl font-black text-sm uppercase tracking-widest hover:border-[#16C60C] transition-all border-white/10"
            >
               Discutons-en
            </button>

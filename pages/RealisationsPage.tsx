@@ -18,12 +18,12 @@ export const RealisationsPage: React.FC = () => {
        </div>
        <Portfolio />
        <div className="py-40 px-6 max-w-7xl mx-auto">
-          <div className="p-16 rounded-[4rem] glass border-[#D4AF37]/20 bg-[#D4AF37]/5 flex flex-col items-center text-center">
+          <div className="p-16 rounded-[4rem] glass border-[#16C60C]/20 bg-[#16C60C]/5 flex flex-col items-center text-center">
              <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight mb-8">Vous voulez le même résultat ?</h2>
              <p className="text-lg text-white/60 mb-12 max-w-2xl leading-relaxed">
                 Montrez-nous votre idée, votre budget, et on construit votre projet ensemble. Tout se discute.
              </p>
-             <a href="#/contact" className="bg-[#D4AF37] text-black px-16 py-6 rounded-2xl font-black text-xl uppercase tracking-widest hover:scale-105 transition-all shadow-2xl shadow-[#D4AF37]/20">
+             <a href="#/contact" className="bg-[#16C60C] text-white px-16 py-6 rounded-2xl font-black text-xl uppercase tracking-widest hover:scale-105 transition-all shadow-2xl shadow-[#16C60C]/20">
                 Lancer mon projet
              </a>
           </div>

@@ -7,32 +7,32 @@ import { CONFIG } from '../config';
 export const Portfolio: React.FC = () => {
   const works = [
     {
+      name: "Nümtema Face",
+      url: CONFIG.links.numtemaface,
+      type: "Lead Generation Machine",
+      desc: "Transformez vos visiteurs en clients avec des funnels vidéo interactifs. Une interface tech, moderne et ultra-efficace.",
+      image: "https://images.unsplash.com/photo-1626908013943-df94de54984c?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      name: "Maya Medium",
+      url: CONFIG.links.mayamedium,
+      type: "Guidance Spirituelle & Voyance",
+      desc: "Un univers mystique, premium et apaisant. Design aux tons chauds et atmosphère spirituelle haut de gamme.",
+      image: "https://images.unsplash.com/photo-1572248521570-58823296c64f?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      name: "Tourma-Line",
+      url: CONFIG.links.tourmaline,
+      type: "Guidance & Soins Énergétiques",
+      desc: "Plongez dans un univers naturel et mystique. Navigation fluide pour découvrir le potentiel de votre chemin de vie.",
+      image: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=800&auto=format&fit=crop"
+    },
+    {
       name: "L'Atelier de Marion",
       url: CONFIG.links.atelierMarion,
-      type: "Restauration & Livraison locale",
-      desc: "Site frais et appétissant avec commande WhatsApp intégrée. Design moderne orienté conversion locale.",
-      image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=800&auto=format&fit=crop"
-    },
-    {
-      name: "mayamedium.fr",
-      url: CONFIG.links.mayamedium,
-      type: "Site vitrine (Bien-être)",
-      desc: "Design épuré et rassurant pour un parcours utilisateur serein.",
-      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop"
-    },
-    {
-      name: "tourma-line.fe",
-      url: CONFIG.links.tourmaline,
-      type: "E-commerce & Branding",
-      desc: "Mise en avant de produits haut de gamme avec une touche moderne.",
-      image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=800&auto=format&fit=crop"
-    },
-    {
-      name: "delharmoniechezsoi.com",
-      url: CONFIG.links.delharmonie,
-      type: "Plateforme de services",
-      desc: "Optimisation du tunnel de réservation et gestion des leads.",
-      image: "https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=800&auto=format&fit=crop"
+      type: "Restauration & Terrasse",
+      desc: "L'élégance culinaire à la française. Site vitrine mettant en avant une terrasse idyllique et une cuisine d'exception.",
+      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop"
     }
   ];
 
@@ -40,42 +40,57 @@ export const Portfolio: React.FC = () => {
     <section id="realisations" className="py-40 px-6 bg-white/[0.01]">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-end justify-between mb-24 gap-10">
-          <div className="max-w-xl">
-            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6 uppercase">Réalisations</h2>
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="max-w-xl"
+          >
+            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6 uppercase">Réalisations Réelles</h2>
             <p className="text-white/50 text-lg font-medium italic leading-relaxed">
               "Des sites clairs, modernes, et orientés clients."
-              <br />Ils nous ont fait confiance pour leur présence digitale.
+              <br />Regardez ce que nous avons déjà construit pour nos partenaires.
             </p>
-          </div>
-          <button className="glass px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest hover:border-[#16C60C] transition-all">
+          </motion.div>
+          <motion.button 
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            onClick={() => window.location.hash = '/realisations'}
+            className="glass px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest hover:border-[#16C60C] transition-all border-white/10"
+          >
             Voir tous les projets
-          </button>
+          </motion.button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 lg:gap-20">
           {works.map((work, i) => (
             <motion.a
               key={i}
               href={work.url}
               target="_blank"
               rel="noreferrer"
-              className="group flex flex-col gap-6"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className="group flex flex-col gap-8"
             >
-              <div className="aspect-video bg-white/5 rounded-[2.5rem] overflow-hidden border border-white/5 group-hover:border-[#16C60C]/40 transition-all relative">
+              <div className="aspect-video bg-white/5 rounded-[3rem] overflow-hidden border border-white/5 group-hover:border-[#16C60C]/40 transition-all relative shadow-2xl">
                  <img 
                     src={work.image} 
                     alt={work.name}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                    className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
                  />
-                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-all"></div>
-                 <div className="absolute bottom-6 right-6 p-3 bg-[#16C60C] text-white rounded-xl translate-y-20 group-hover:translate-y-0 transition-transform duration-500 shadow-xl">
-                    <ExternalLink size={20} />
+                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-all duration-500"></div>
+                 <div className="absolute bottom-8 right-8 p-4 bg-[#16C60C] text-white rounded-2xl translate-y-20 group-hover:translate-y-0 transition-transform duration-500 shadow-xl shadow-[#16C60C]/30">
+                    <ExternalLink size={24} />
                  </div>
               </div>
               <div>
-                <span className="text-[#16C60C] text-[10px] font-black uppercase tracking-widest">{work.type}</span>
-                <h3 className="text-2xl font-black tracking-tighter mt-1 mb-3">{work.name}</h3>
-                <p className="text-white/40 text-sm font-medium leading-relaxed">{work.desc}</p>
+                <span className="text-[#16C60C] text-xs font-black uppercase tracking-[0.3em] mb-3 block">{work.type}</span>
+                <h3 className="text-3xl font-black tracking-tighter mb-4">{work.name}</h3>
+                <p className="text-white/40 text-base font-medium leading-relaxed max-w-lg">{work.desc}</p>
               </div>
             </motion.a>
           ))}

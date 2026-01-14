@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Bot } from 'lucide-react';
+import { CONFIG } from '../config';
 
 interface SupportButtonProps {
   onOpenChat: () => void;
@@ -14,9 +14,13 @@ export const SupportButton: React.FC<SupportButtonProps> = ({ onOpenChat }) => {
        </div>
        <button
         onClick={onOpenChat}
-        className="w-16 h-16 bg-[#16C60C] rounded-full flex items-center justify-center text-white shadow-2xl shadow-[#16C60C]/30 hover:scale-110 active:scale-95 transition-all border-4 border-[#07070B]"
+        className="w-16 h-16 bg-black rounded-full flex items-center justify-center overflow-hidden shadow-2xl shadow-[#16C60C]/40 hover:scale-110 active:scale-95 transition-all border-2 border-[#16C60C]"
       >
-        <Bot size={32} className="group-hover:rotate-12 transition-transform" />
+        <img 
+          src={CONFIG.brand.logoUrl} 
+          alt="Chat" 
+          className="w-full h-full object-contain p-1 rounded-full group-hover:rotate-6 transition-transform" 
+        />
       </button>
     </div>
   );
