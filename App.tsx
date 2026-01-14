@@ -12,6 +12,7 @@ import { Chatbot } from './components/Chatbot';
 // Sections (SPA Home)
 import { Hero } from './sections/Hero';
 import { Services } from './sections/Services';
+import { Showcase3D } from './sections/Showcase3D';
 import { Packs } from './sections/Packs';
 import { Portfolio } from './sections/Portfolio';
 import { Process } from './sections/Process';
@@ -38,6 +39,7 @@ const HomePage = () => (
   <>
     <Hero />
     <Services />
+    <Showcase3D />
     <Packs />
     <Portfolio />
     <Process />
