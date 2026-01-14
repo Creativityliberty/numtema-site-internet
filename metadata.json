@@ -1,0 +1,8 @@
+{
+  "name": "Nümtema Agency",
+  "description": "Premium digital agency specialized in modern websites, AI automations, and professional training. We build with vision and excellence.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

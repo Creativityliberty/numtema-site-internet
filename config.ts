@@ -1,0 +1,86 @@
+
+export const CONFIG = {
+  brand: {
+    name: "Nümtema",
+    suffix: "Agency",
+    owner: "Lionel Numtema",
+    tagline: "Vision • Excellence • Conversion",
+    description: "Nous transformons votre activité en présence en ligne crédible + un système qui génère des clients.",
+    logoUrl: "https://www.bing.com/th/id/OIP.PIziIIufgeuJt8Ej9hb12QHaHa?w=171&h=211&c=8&rs=1&qlt=90&r=0&o=6&dpr=1.1&pid=3.1&rm=2"
+  },
+  contact: {
+    whatsapp: "33745434264", 
+    email: "contact@numtema.agency",
+    phone: "+33 7 45 43 42 64"
+  },
+  socials: {
+    youtube: "https://www.youtube.com/@Numtema",
+    instagram: "https://www.instagram.com/numtema_lion/",
+    github: "https://github.com/Numtema"
+  },
+  links: {
+    mayamedium: "https://mayamedium.fr",
+    tourmaline: "https://tourma-line.fe",
+    delharmonie: "https://delharmoniechezsoi.com",
+    atelierMarion: "#"
+  },
+  pricing: {
+    packs: [
+      {
+        id: "starter",
+        name: "Starter",
+        price: 350,
+        desc: "Idéal pour démarrer vite",
+        features: ["Site One-Page complet", "WhatsApp intégré", "Formulaire contact", "Responsive mobile", "Livraison 3-5 jours"]
+      },
+      {
+        id: "pro",
+        name: "Pro",
+        price: 500,
+        desc: "Pour paraître sérieux",
+        features: ["Starter +", "SEO basique (indexation)", "1 page bonus", "Retouches incluses", "Livraison 5-7 jours"]
+      },
+      {
+        id: "semi",
+        name: "Semi-Complet",
+        price: 800,
+        desc: "Pour vendre et convertir",
+        features: ["Site 5 pages", "Copywriting guidé", "Portfolio / Réalisations", "FAQ + Avis clients", "Optimisation conversion"]
+      },
+      {
+        id: "complet",
+        name: "Complet",
+        price: 1500,
+        desc: "Full système digital",
+        features: ["Design Premium", "IA / Automatisation simple", "Pages SEO ou Blog", "Calendrier RDV", "Support 30 jours"]
+      }
+    ],
+    options: [
+      { name: "Logo simple", price: 60 },
+      { name: "Bannière réseaux", price: 80 },
+      { name: "Chatbot IA Simple", price: 150 },
+      { name: "Chatbot IA Business", price: 350 },
+      { name: "Multilingue", price: 200 }
+    ]
+  },
+  formations: [
+    {
+      title: "IA pour Entrepreneurs",
+      desc: "Apprenez à automatiser votre business avec les derniers outils IA.",
+      price: "Dès 149€",
+      tags: ["Tendance", "Pratique"]
+    },
+    {
+      title: "Créer son Site Web",
+      desc: "Devenez autonome sur la création et la gestion de votre site vitrine.",
+      price: "Dès 129€",
+      tags: ["Indépendance"]
+    },
+    {
+      title: "Lancer son Activité",
+      desc: "Structure, stratégie et outils pour passer de l'idée au premier client.",
+      price: "Dès 199€",
+      tags: ["Business"]
+    }
+  ]
+};
