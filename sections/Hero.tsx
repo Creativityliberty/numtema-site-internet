@@ -56,6 +56,9 @@ export const Hero: React.FC = () => {
       {/* Background Decor */}
       <div className="absolute inset-0 hero-grid -z-10 opacity-30"></div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#16C60C]/5 blur-[160px] rounded-full -z-10"></div>
+      
+      {/* Ambient Light */}
+      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(22,198,12,0.03),transparent_50%)] pointer-events-none"></div>
 
       <motion.div 
         variants={container}
@@ -73,18 +76,18 @@ export const Hero: React.FC = () => {
 
         <motion.h1
           variants={wordContainer}
-          className="text-6xl md:text-9xl font-black tracking-tighter leading-[0.85] mb-12 flex flex-wrap justify-center gap-x-4 md:gap-x-8"
+          className="text-6xl md:text-[10rem] font-black tracking-tighter leading-[0.8] mb-12 flex flex-wrap justify-center gap-x-4 md:gap-x-8"
         >
           {["Propulsez", "votre"].map((word, i) => (
             <motion.span key={i} variants={wordItem} className="inline-block">{word}</motion.span>
           ))}
           <motion.span 
             variants={wordItem}
-            className="green-gradient italic w-full block overflow-hidden pb-2"
+            className="green-gradient italic w-full block overflow-hidden pb-4"
           >
             visibilité
           </motion.span> 
-          {["en", "72", "Heures", "Chrono"].map((word, i) => (
+          {["en", "72", "Heures"].map((word, i) => (
             <motion.span key={i} variants={wordItem} className="inline-block">{word}</motion.span>
           ))}
         </motion.h1>
