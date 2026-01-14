@@ -16,15 +16,21 @@ const container = {
 };
 
 const item = {
-  hidden: { y: 60, opacity: 0 },
+  hidden: { y: 60, opacity: 0, filter: 'blur(10px)' },
   show: { 
     y: 0, 
     opacity: 1, 
+    filter: 'blur(0px)',
     transition: { 
       duration: 1, 
       ease: [0.16, 1, 0.3, 1] 
     } 
   }
+};
+
+const letterAnimation = {
+  hidden: { y: 20, opacity: 0 },
+  show: { y: 0, opacity: 1 }
 };
 
 export const Hero: React.FC = () => {
@@ -52,7 +58,11 @@ export const Hero: React.FC = () => {
           variants={item}
           className="text-6xl md:text-9xl font-black tracking-tighter leading-[0.85] mb-12"
         >
-          Propulsez votre <br /> <span className="green-gradient italic">visibilité</span> en <br /> 72 Heures Chrono
+          Propulsez votre <br /> 
+          <span className="green-gradient italic inline-block overflow-hidden pb-2">
+            visibilité
+          </span> 
+          <br /> en 72 Heures Chrono
         </motion.h1>
 
         <motion.p

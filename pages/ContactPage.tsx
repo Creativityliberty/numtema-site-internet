@@ -1,10 +1,16 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { MessageSquare, Phone, Mail, Send, CheckCircle, Clock, Star, Eye } from 'lucide-react';
+import { MessageSquare, Phone, Send, Clock, Star, Eye } from 'lucide-react';
 import { CONFIG } from '../config';
 
 export const ContactPage: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    project: ''
+  });
+
   const engagements = [
     {
       icon: Eye,
@@ -22,6 +28,19 @@ export const ContactPage: React.FC = () => {
       desc: "Pas de templates génériques. Chaque design est soigné pour refléter l'excellence de votre marque."
     }
   ];
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.name || !formData.project) return;
+
+    const message = `*NOUVEAU BRIEF CLIENT - NÜMTEMA AGENCY*\n\n` +
+      `👤 *Nom complet :* ${formData.name}\n` +
+      `📧 *Email :* ${formData.email || 'Non précisé'}\n\n` +
+      `🚀 *Projet :*\n${formData.project}`;
+
+    const whatsappUrl = `https://wa.me/${CONFIG.contact.whatsapp}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
 
   return (
     <div className="pt-40 pb-24 px-6">
@@ -67,23 +86,43 @@ export const ContactPage: React.FC = () => {
                className="glass p-12 md:p-16 rounded-[4rem] border-white/10"
              >
                 <h3 className="text-3xl font-black uppercase tracking-tight mb-10">Briefez-nous ici</h3>
-                <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                <form className="space-y-6" onSubmit={handleSubmit}>
                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                          <label className="text-[10px] font-black uppercase tracking-widest text-white/40 ml-2">Nom complet</label>
-                         <input type="text" className="w-full glass border-white/10 rounded-2xl py-5 px-8 outline-none focus:border-[#16C60C]/50 transition-all font-bold" placeholder="Votre nom" />
+                         <input 
+                           type="text" 
+                           required
+                           value={formData.name}
+                           onChange={(e) => setFormData({...formData, name: e.target.value})}
+                           className="w-full glass border-white/10 rounded-2xl py-5 px-8 outline-none focus:border-[#16C60C]/50 transition-all font-bold" 
+                           placeholder="Votre nom" 
+                         />
                       </div>
                       <div className="space-y-2">
                          <label className="text-[10px] font-black uppercase tracking-widest text-white/40 ml-2">Email</label>
-                         <input type="email" className="w-full glass border-white/10 rounded-2xl py-5 px-8 outline-none focus:border-[#16C60C]/50 transition-all font-bold" placeholder="email@exemple.com" />
+                         <input 
+                           type="email" 
+                           value={formData.email}
+                           onChange={(e) => setFormData({...formData, email: e.target.value})}
+                           className="w-full glass border-white/10 rounded-2xl py-5 px-8 outline-none focus:border-[#16C60C]/50 transition-all font-bold" 
+                           placeholder="email@exemple.com" 
+                         />
                       </div>
                    </div>
                    <div className="space-y-2">
                       <label className="text-[10px] font-black uppercase tracking-widest text-white/40 ml-2">Votre Projet</label>
-                      <textarea rows={5} className="w-full glass border-white/10 rounded-2xl py-5 px-8 outline-none focus:border-[#16C60C]/50 transition-all font-bold" placeholder="Expliquez-nous votre vision et votre budget..."></textarea>
+                      <textarea 
+                        rows={5} 
+                        required
+                        value={formData.project}
+                        onChange={(e) => setFormData({...formData, project: e.target.value})}
+                        className="w-full glass border-white/10 rounded-2xl py-5 px-8 outline-none focus:border-[#16C60C]/50 transition-all font-bold" 
+                        placeholder="Expliquez-nous votre vision et votre budget..."
+                      ></textarea>
                    </div>
-                   <button className="w-full py-6 bg-[#16C60C] text-white rounded-2xl font-black text-lg uppercase tracking-widest flex items-center justify-center gap-4 hover:bg-white hover:text-black transition-all shadow-2xl shadow-[#16C60C]/20">
-                      Envoyer le brief <Send size={20} />
+                   <button type="submit" className="w-full py-6 bg-[#16C60C] text-white rounded-2xl font-black text-lg uppercase tracking-widest flex items-center justify-center gap-4 hover:bg-white hover:text-black transition-all shadow-2xl shadow-[#16C60C]/20">
+                      Envoyer le brief sur WhatsApp <Send size={20} />
                    </button>
                 </form>
              </motion.div>
