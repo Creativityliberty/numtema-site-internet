@@ -7,6 +7,13 @@ import { CONFIG } from '../config';
 export const Portfolio: React.FC = () => {
   const works = [
     {
+      name: "Del'Harmonie Chez Soi",
+      url: CONFIG.links.delharmonie,
+      type: "Bien-être & Harmonisation",
+      desc: "L'élégance au service du soin. Un univers visuel doux et professionnel pour le bien-être de l'habitat et de l'esprit.",
+      image: "https://images.unsplash.com/photo-1513161455079-7dc1de15ef3e?q=80&w=800&auto=format&fit=crop"
+    },
+    {
       name: "Nümtema Face",
       url: CONFIG.links.numtemaface,
       type: "Lead Generation Machine",

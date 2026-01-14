@@ -57,7 +57,7 @@ export const Footer: React.FC = () => {
            <p>© 2025 {CONFIG.brand.name.toUpperCase()} AGENCY — LUXURY DIGITAL SOLUTIONS.</p>
            <div className="flex gap-10">
               <span>Fait avec excellence</span>
-              <span>Propulsé par la vision de {CONFIG.brand.owner}</span>
+              <span>Propulsé par la vision de {CONFIG.brand.name} {CONFIG.brand.suffix}</span>
            </div>
         </div>
       </div>

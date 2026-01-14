@@ -28,9 +28,26 @@ const item = {
   }
 };
 
-const letterAnimation = {
-  hidden: { y: 20, opacity: 0 },
-  show: { y: 0, opacity: 1 }
+const wordContainer = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.08
+    }
+  }
+};
+
+const wordItem = {
+  hidden: { y: 100, opacity: 0 },
+  show: { 
+    y: 0, 
+    opacity: 1,
+    transition: { 
+      duration: 0.8, 
+      ease: [0.16, 1, 0.3, 1] 
+    } 
+  }
 };
 
 export const Hero: React.FC = () => {
@@ -55,14 +72,21 @@ export const Hero: React.FC = () => {
         </motion.div>
 
         <motion.h1
-          variants={item}
-          className="text-6xl md:text-9xl font-black tracking-tighter leading-[0.85] mb-12"
+          variants={wordContainer}
+          className="text-6xl md:text-9xl font-black tracking-tighter leading-[0.85] mb-12 flex flex-wrap justify-center gap-x-4 md:gap-x-8"
         >
-          Propulsez votre <br /> 
-          <span className="green-gradient italic inline-block overflow-hidden pb-2">
+          {["Propulsez", "votre"].map((word, i) => (
+            <motion.span key={i} variants={wordItem} className="inline-block">{word}</motion.span>
+          ))}
+          <motion.span 
+            variants={wordItem}
+            className="green-gradient italic w-full block overflow-hidden pb-2"
+          >
             visibilité
-          </span> 
-          <br /> en 72 Heures Chrono
+          </motion.span> 
+          {["en", "72", "Heures", "Chrono"].map((word, i) => (
+            <motion.span key={i} variants={wordItem} className="inline-block">{word}</motion.span>
+          ))}
         </motion.h1>
 
         <motion.p

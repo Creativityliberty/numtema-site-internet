@@ -1,27 +1,30 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Layout, GraduationCap, Cpu } from 'lucide-react';
+import { MonitorSmartphone, Library, BrainCircuit } from 'lucide-react';
 
 export const Services: React.FC = () => {
   const items = [
     {
-      icon: Layout,
+      icon: MonitorSmartphone,
       title: "Sites Web Haute-Conversion",
       desc: "Nous créons votre vitrine professionnelle en 72 heures. Design moderne, responsive et optimisé pour le business.",
-      color: "text-blue-400"
+      color: "text-blue-400",
+      bg: "bg-blue-500/10"
     },
     {
-      icon: GraduationCap,
+      icon: Library,
       title: "Systèmes de Formations",
       desc: "Espaces membres, automatisation des paiements et gestion de contenu pour monétiser votre expertise.",
-      color: "text-purple-400"
+      color: "text-purple-400",
+      bg: "bg-purple-500/10"
     },
     {
-      icon: Cpu,
+      icon: BrainCircuit,
       title: "Intelligence Artificielle",
       desc: "Intégration de chatbots intelligents et automatisations CRM pour décupler votre productivité.",
-      color: "text-[#16C60C]"
+      color: "text-[#16C60C]",
+      bg: "bg-[#16C60C]/10"
     }
   ];
 
@@ -59,12 +62,28 @@ export const Services: React.FC = () => {
               whileHover={{ y: -15, scale: 1.02 }}
               className="glass p-14 rounded-[3.5rem] flex flex-col items-start gap-10 border-white/5 hover:border-[#16C60C]/30 transition-all group relative overflow-hidden"
             >
-              <div className="absolute -right-4 -top-4 w-24 h-24 bg-[#16C60C]/5 blur-3xl group-hover:bg-[#16C60C]/10 transition-all"></div>
-              <div className={`p-5 rounded-2xl bg-white/5 ${item.color} group-hover:scale-110 group-hover:bg-[#16C60C]/5 transition-all`}>
-                <item.icon size={48} />
+              {/* Animated Glow Background */}
+              <div className="absolute -right-10 -top-10 w-32 h-32 bg-[#16C60C]/5 blur-[80px] group-hover:bg-[#16C60C]/20 transition-all duration-700"></div>
+              
+              {/* Modern Icon Container */}
+              <div className="relative">
+                <div className={`absolute inset-0 ${item.bg} blur-2xl rounded-full scale-150 opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                <div className={`relative p-6 rounded-3xl bg-white/5 border border-white/10 ${item.color} shadow-2xl group-hover:scale-110 group-hover:bg-white/10 transition-all duration-500 ease-out`}>
+                  <item.icon size={44} strokeWidth={1.5} className="drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]" />
+                </div>
               </div>
-              <h3 className="text-3xl font-black leading-tight tracking-tight">{item.title}</h3>
-              <p className="text-white/50 text-lg font-medium leading-relaxed">{item.desc}</p>
+
+              <div className="space-y-4">
+                <h3 className="text-3xl font-black leading-tight tracking-tight uppercase">
+                  {item.title}
+                </h3>
+                <p className="text-white/50 text-lg font-medium leading-relaxed group-hover:text-white/70 transition-colors">
+                  {item.desc}
+                </p>
+              </div>
+
+              {/* Subtle hover indicator */}
+              <div className="w-12 h-1 bg-white/10 rounded-full group-hover:w-full group-hover:bg-[#16C60C] transition-all duration-500"></div>
             </motion.div>
           ))}
         </div>
