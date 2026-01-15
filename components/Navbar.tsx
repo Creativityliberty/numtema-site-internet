@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, MessageSquare } from 'lucide-react';
@@ -19,9 +18,11 @@ export const Navbar: React.FC = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-between glass px-6 py-3 rounded-3xl border-white/10">
-        <Link to="/" className="flex items-center gap-3">
-          <img src={CONFIG.brand.logoUrl} alt="Logo" className="w-10 h-10 object-contain rounded-full" />
+      <div className="max-w-7xl mx-auto flex items-center justify-between glass px-6 py-2.5 rounded-full border-white/10 shadow-2xl">
+        <Link to="/" className="flex items-center gap-3 group">
+          <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden border border-white/20 transition-transform group-hover:scale-110">
+            <img src={CONFIG.brand.logoUrl} alt="Logo" className="w-full h-full object-cover" />
+          </div>
           <span className="text-xl font-black tracking-tighter uppercase hidden sm:block">
             {CONFIG.brand.name}<span className="text-[#16C60C]">{CONFIG.brand.suffix}</span>
           </span>
@@ -43,9 +44,9 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center gap-4">
           <a
             href={`https://wa.me/${CONFIG.contact.whatsapp}`}
-            className="hidden sm:flex items-center gap-2 bg-[#16C60C] text-white px-6 py-2.5 rounded-xl font-black text-[10px] uppercase tracking-widest hover:bg-white hover:text-black transition-all shadow-lg"
+            className="hidden sm:flex items-center gap-2 bg-[#16C60C] text-white px-6 py-3 rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-white hover:text-black transition-all shadow-lg shadow-[#16C60C]/20"
           >
-            <MessageSquare size={14} /> WhatsApp
+            <MessageSquare size={14} className="fill-current" /> WHATSAPP
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -63,7 +64,7 @@ export const Navbar: React.FC = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-24 left-6 right-6 glass p-8 rounded-3xl lg:hidden border-white/10"
+            className="absolute top-24 left-6 right-6 glass p-8 rounded-[2.5rem] lg:hidden border-white/10 shadow-2xl"
           >
             <div className="flex flex-col gap-6">
               {navLinks.map((link) => (
@@ -71,14 +72,14 @@ export const Navbar: React.FC = () => {
                   key={link.name}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className="text-2xl font-black tracking-tighter"
+                  className="text-2xl font-black tracking-tighter uppercase"
                 >
                   {link.name}
                 </Link>
               ))}
               <a
                 href={`https://wa.me/${CONFIG.contact.whatsapp}`}
-                className="flex items-center justify-center gap-2 bg-[#16C60C] text-white w-full py-4 rounded-2xl font-black uppercase tracking-widest mt-4"
+                className="flex items-center justify-center gap-2 bg-[#16C60C] text-white w-full py-5 rounded-2xl font-black uppercase tracking-widest mt-4"
               >
                 WhatsApp Maintenant
               </a>

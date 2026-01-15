@@ -1,8 +1,7 @@
-
 export const CONFIG = {
   brand: {
-    name: "Nümtema",
-    suffix: "Agency",
+    name: "NÜMTEMA",
+    suffix: "AGENCY",
     owner: "Lionel Numtema",
     tagline: "Vision • Excellence • Conversion",
     description: "Nous transformons votre activité en présence en ligne crédible + un système qui génère des clients en un temps record.",

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles, Zap, ShieldCheck, Globe } from 'lucide-react';
@@ -52,19 +51,49 @@ const wordItem = {
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen pt-32 pb-20 px-6 flex flex-col items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen pt-40 pb-20 px-6 flex flex-col items-center justify-center overflow-hidden">
       {/* Background Decor */}
       <div className="absolute inset-0 hero-grid -z-10 opacity-30"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#16C60C]/5 blur-[160px] rounded-full -z-10"></div>
       
-      {/* Ambient Light */}
-      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(22,198,12,0.03),transparent_50%)] pointer-events-none"></div>
+      {/* Screenshot-Style Overlapping Tilted Images */}
+      <div className="absolute inset-0 pointer-events-none flex items-center justify-center -z-10 opacity-60 overflow-hidden">
+        <div className="relative w-full max-w-7xl h-full flex items-center justify-center translate-y-10">
+          {/* Nature Image (Bottom) */}
+          <motion.div 
+            initial={{ opacity: 0, x: -100, rotateZ: -35 }}
+            animate={{ opacity: 0.4, x: -180, rotateZ: -45, y: 150 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+            className="absolute w-[400px] md:w-[600px] aspect-[4/3] rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl"
+          >
+            <img 
+              src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=1200&auto=format&fit=crop" 
+              alt="Nature" 
+              className="w-full h-full object-cover scale-110"
+            />
+          </motion.div>
+
+          {/* Tech/Work Image (Top) */}
+          <motion.div 
+            initial={{ opacity: 0, x: 100, rotateZ: -25 }}
+            animate={{ opacity: 0.8, x: 120, rotateZ: -45, y: -150 }}
+            transition={{ duration: 1.5, delay: 0.2, ease: "easeOut" }}
+            className="absolute w-[500px] md:w-[700px] aspect-[16/10] rounded-[3rem] overflow-hidden border border-[#16C60C]/30 shadow-2xl z-10"
+          >
+            <img 
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&auto=format&fit=crop" 
+              alt="Workspace" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#16C60C]/20 to-transparent"></div>
+          </motion.div>
+        </div>
+      </div>
 
       <motion.div 
         variants={container}
         initial="hidden"
         animate="show"
-        className="max-w-6xl w-full text-center"
+        className="max-w-6xl w-full text-center relative z-20"
       >
         <motion.div
           variants={item}
@@ -76,25 +105,25 @@ export const Hero: React.FC = () => {
 
         <motion.h1
           variants={wordContainer}
-          className="text-6xl md:text-[10rem] font-black tracking-tighter leading-[0.8] mb-12 flex flex-wrap justify-center gap-x-4 md:gap-x-8"
+          className="text-6xl md:text-[9rem] font-black tracking-tighter leading-[0.8] mb-12 flex flex-wrap justify-center gap-x-4 md:gap-x-8"
         >
           {["Propulsez", "votre"].map((word, i) => (
-            <motion.span key={i} variants={wordItem} className="inline-block">{word}</motion.span>
+            <motion.span key={i} variants={wordItem} className="inline-block uppercase">{word}</motion.span>
           ))}
           <motion.span 
             variants={wordItem}
-            className="green-gradient italic w-full block overflow-hidden pb-4"
+            className="green-gradient italic w-full block overflow-hidden pb-4 uppercase"
           >
             visibilité
           </motion.span> 
           {["en", "72", "Heures"].map((word, i) => (
-            <motion.span key={i} variants={wordItem} className="inline-block">{word}</motion.span>
+            <motion.span key={i} variants={wordItem} className="inline-block uppercase">{word}</motion.span>
           ))}
         </motion.h1>
 
         <motion.p
           variants={item}
-          className="text-lg md:text-2xl font-medium text-white/60 mb-16 max-w-3xl mx-auto leading-relaxed"
+          className="text-lg md:text-2xl font-medium text-white/60 mb-16 max-w-3xl mx-auto leading-relaxed px-4"
         >
           Nümtema Agency crée des sites internet qui inspirent confiance et génèrent du profit. 
           <span className="block mt-4 text-white italic font-serif">"L'excellence n'attend pas : votre business mérite d'être en ligne dès maintenant."</span>
@@ -102,17 +131,17 @@ export const Hero: React.FC = () => {
 
         <motion.div
           variants={item}
-          className="flex flex-col sm:flex-row items-center justify-center gap-6"
+          className="flex flex-col sm:flex-row items-center justify-center gap-6 px-4"
         >
           <a
             href={`https://wa.me/${CONFIG.contact.whatsapp}`}
-            className="w-full sm:w-auto bg-[#16C60C] text-white px-14 py-7 rounded-2xl font-black text-lg flex items-center justify-center gap-4 hover:scale-105 active:scale-95 transition-all shadow-2xl shadow-[#16C60C]/30"
+            className="w-full sm:w-auto bg-[#16C60C] text-white px-14 py-7 rounded-full font-black text-lg flex items-center justify-center gap-4 hover:scale-105 active:scale-95 transition-all shadow-2xl shadow-[#16C60C]/40"
           >
             WhatsApp maintenant <ArrowRight size={22} />
           </a>
           <button 
             onClick={() => document.getElementById('packs')?.scrollIntoView({ behavior: 'smooth' })}
-            className="w-full sm:w-auto glass px-14 py-7 rounded-2xl font-black text-lg hover:border-[#16C60C]/50 transition-all border-white/5 active:scale-95"
+            className="w-full sm:w-auto glass px-14 py-7 rounded-full font-black text-lg hover:border-[#16C60C]/50 transition-all border-white/5 active:scale-95"
           >
             Voir les packs
           </button>
