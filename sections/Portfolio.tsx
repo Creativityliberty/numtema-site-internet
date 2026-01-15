@@ -11,7 +11,7 @@ export const Portfolio: React.FC = () => {
       url: CONFIG.links.delharmonie,
       type: "Bien-être & Harmonisation",
       desc: "L'élégance au service du soin. Un univers visuel doux et professionnel pour le bien-être de l'habitat et de l'esprit.",
-      image: "https://images.unsplash.com/photo-1513161455079-7dc1de15ef3e?q=80&w=800&auto=format&fit=crop"
+      image: "/images/portfolio/delharmonie.png"
     },
     {
       name: "Nümtema Face",
@@ -39,7 +39,7 @@ export const Portfolio: React.FC = () => {
       url: CONFIG.links.atelierMarion,
       type: "Restauration & Terrasse",
       desc: "L'élégance culinaire à la française. Site vitrine mettant en avant une terrasse idyllique et une cuisine d'exception.",
-      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop"
+      image: "/images/portfolio/atelier-marion.png"
     }
   ];
 
@@ -47,7 +47,7 @@ export const Portfolio: React.FC = () => {
     <section id="realisations" className="py-40 px-6 bg-white/[0.01]">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-end justify-between mb-24 gap-10">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -59,7 +59,7 @@ export const Portfolio: React.FC = () => {
               <br />Regardez ce que nous avons déjà construit pour nos partenaires.
             </p>
           </motion.div>
-          <motion.button 
+          <motion.button
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -84,15 +84,15 @@ export const Portfolio: React.FC = () => {
               className="group flex flex-col gap-8"
             >
               <div className="aspect-video bg-white/5 rounded-[3rem] overflow-hidden border border-white/5 group-hover:border-[#16C60C]/40 transition-all relative shadow-2xl">
-                 <img 
-                    src={work.image} 
-                    alt={work.name}
-                    className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
-                 />
-                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-all duration-500"></div>
-                 <div className="absolute bottom-8 right-8 p-4 bg-[#16C60C] text-white rounded-2xl translate-y-20 group-hover:translate-y-0 transition-transform duration-500 shadow-xl shadow-[#16C60C]/30">
-                    <ExternalLink size={24} />
-                 </div>
+                <img
+                  src={work.image}
+                  alt={work.name}
+                  className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
+                />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-all duration-500"></div>
+                <div className="absolute bottom-8 right-8 p-4 bg-[#16C60C] text-white rounded-2xl translate-y-20 group-hover:translate-y-0 transition-transform duration-500 shadow-xl shadow-[#16C60C]/30">
+                  <ExternalLink size={24} />
+                </div>
               </div>
               <div>
                 <span className="text-[#16C60C] text-xs font-black uppercase tracking-[0.3em] mb-3 block">{work.type}</span>
