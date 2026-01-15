@@ -4,7 +4,7 @@ import { CONFIG } from '../config';
 
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
 
-export const chatWithMikmik = async (userMessage: string, history: {role: string, parts: any[]}[]) => {
+export const chatWithMikmik = async (userMessage: string, history: { role: string, parts: any[] }[]) => {
   try {
     const knowledgeBase = `
       CONTEXTE AGENCE NÜMTEMA:
@@ -22,12 +22,13 @@ export const chatWithMikmik = async (userMessage: string, history: {role: string
       - Logo simple: 60€
       - Chatbot IA Business: 350€
       
-      RÉALISATIONS (À citer absolument):
-      - Del'Harmonie Chez Soi: https://delharmoniechezsoi.com/ (Bien-être & Harmonisation)
-      - Nümtema Face: https://www.numtemaface.fr/ (Lead Generation)
-      - Maya Medium: https://www.mayamedium.fr/ (Spiritualité)
-      - Tourma-Line: https://www.tourma-line.fr/ (Soins énergétiques)
-      - L'Atelier de Marion: https://latelierdemarion.fr/ (Restauration)
+      RÉALISATIONS (À citer absolument avec images):
+      - Del'Harmonie Chez Soi: https://delharmoniechezsoi.com/ (Bien-être & Harmonisation) ![Del'Harmonie](/images/portfolio/delharmonie.png)
+      - Nümtema Face: https://www.numtemaface.fr/ (Lead Generation) ![Nümtema Face](/images/portfolio/numtema-face.png)
+      - Maya Medium: https://www.mayamedium.fr/ (Spiritualité) ![Maya Medium](/images/portfolio/maya-medium.png)
+      - Tourma-Line: https://www.tourma-line.fr/ (Soins énergétiques) ![Tourma-Line](/images/portfolio/tourmaline.png)
+      - L'Atelier de Marion: https://latelierdemarion.fr/ (Restauration) ![L'Atelier de Marion](/images/portfolio/atelier-marion.png)
+      - SKE Logistics: https://www.skelogistics.com/ (Import-Export & Logistique) ![SKE Logistics](/images/portfolio/skelogistics.png)
       
       CONTACT:
       - WhatsApp: ${CONFIG.contact.phone}
@@ -44,7 +45,9 @@ export const chatWithMikmik = async (userMessage: string, history: {role: string
         1. INTERDICTION TOTALE d'utiliser des astérisques (* ou **). 
         2. Pour les listes, utilise uniquement des tirets simples (-) au début de ligne.
         3. Pour mettre en avant un titre, écris-le en MAJUSCULES sur sa propre ligne.
-        4. Pour les liens, utilise [NOM DU SITE](URL).
+        4. Pour les liens de sites, utilise [NOM DU SITE](URL).
+        5. IMPORTANT: Quand tu montres des réalisations, utilise TOUJOURS la syntaxe ![Nom du projet](chemin_image) pour afficher les images.
+           Exemple: ![Del'Harmonie](/images/portfolio/delharmonie.png)
         
         CONNAISSANCES:
         ${knowledgeBase}
@@ -54,6 +57,7 @@ export const chatWithMikmik = async (userMessage: string, history: {role: string
         RÉPONSES TYPES:
         - Si on parle de contact: Donne le WhatsApp et l'Email sous forme de liste claire.
         - Si on parle de prix: Détaille les packs avec des tirets, sans étoiles.
+        - Si on parle de réalisations/portfolio: Montre les images avec ![nom](chemin) ET les liens [NOM](URL).
         - Rappelle que "Tout se discute avec Lionel sur WhatsApp".`
       }
     });
