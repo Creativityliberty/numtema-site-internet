@@ -18,7 +18,7 @@ export const Portfolio: React.FC = () => {
       url: CONFIG.links.numtemaface,
       type: "Lead Generation Machine",
       desc: "Transformez vos visiteurs en clients avec des funnels vidéo interactifs. Une interface tech, moderne et ultra-efficace.",
-      image: "https://images.unsplash.com/photo-1626908013943-df94de54984c?q=80&w=800&auto=format&fit=crop"
+      image: "/images/portfolio/numtema-face.png"
     },
     {
       name: "Maya Medium",
@@ -32,7 +32,7 @@ export const Portfolio: React.FC = () => {
       url: CONFIG.links.tourmaline,
       type: "Guidance & Soins Énergétiques",
       desc: "Plongez dans un univers naturel et mystique. Navigation fluide pour découvrir le potentiel de votre chemin de vie.",
-      image: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=800&auto=format&fit=crop"
+      image: "/images/portfolio/tourmaline.png"
     },
     {
       name: "L'Atelier de Marion",
