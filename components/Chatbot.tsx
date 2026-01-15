@@ -11,7 +11,7 @@ interface ChatbotProps {
 }
 
 const QuickReply: React.FC<{ icon: any, text: string, onClick: () => void }> = ({ icon: Icon, text, onClick }) => (
-  <button 
+  <button
     onClick={onClick}
     className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-[#16C60C]/20 hover:border-[#16C60C]/50 transition-all whitespace-nowrap"
   >
@@ -38,7 +38,7 @@ const RichText: React.FC<{ content: string }> = ({ content }) => {
         // WhatsApp Detection for Button Rendering
         if (cleanLine.includes(CONFIG.contact.phone) || cleanLine.toLowerCase().includes('whatsapp')) {
           return (
-            <a 
+            <a
               key={i}
               href={`https://wa.me/${CONFIG.contact.whatsapp}`}
               target="_blank"
@@ -55,7 +55,7 @@ const RichText: React.FC<{ content: string }> = ({ content }) => {
           const match = cleanLine.match(/\[(.*?)\]\((.*?)\)/);
           if (match) {
             return (
-              <a 
+              <a
                 key={i}
                 href={match[2]}
                 target="_blank"
@@ -80,7 +80,7 @@ const RichText: React.FC<{ content: string }> = ({ content }) => {
 };
 
 export const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
-  const [messages, setMessages] = useState<{role: 'user' | 'model', text: string}[]>([
+  const [messages, setMessages] = useState<{ role: 'user' | 'model', text: string }[]>([
     { role: 'model', text: "Bienvenue chez Nümtema Agency ! Je suis Mikmik. \n\nQue puis-je faire pour propulser votre visibilité aujourd'hui ? 🚀" }
   ]);
   const [input, setInput] = useState('');
@@ -99,14 +99,14 @@ export const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
   const handleSend = async (textOverride?: string) => {
     const textToSend = textOverride || input;
     if (!textToSend.trim() || loading) return;
-    
+
     setInput('');
     setMessages(prev => [...prev, { role: 'user', text: textToSend }]);
     setLoading(true);
 
     const history = messages.map(m => ({
-        role: m.role,
-        parts: [{ text: m.text }]
+      role: m.role,
+      parts: [{ text: m.text }]
     }));
 
     const botResponse = await chatWithMikmik(textToSend, history);
@@ -127,27 +127,27 @@ export const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
           initial={{ opacity: 0, scale: 0.9, y: 50, filter: 'blur(10px)' }}
           animate={{ opacity: 1, scale: 1, y: 0, filter: 'blur(0px)' }}
           exit={{ opacity: 0, scale: 0.9, y: 50, filter: 'blur(10px)' }}
-          className="fixed bottom-28 left-8 w-[90vw] sm:w-[420px] h-[650px] glass rounded-[3rem] z-[100] flex flex-col overflow-hidden shadow-[0_32px_64px_-12px_rgba(22,198,12,0.25)] border-[#16C60C]/30"
+          className="fixed bottom-6 sm:bottom-28 right-4 sm:left-8 w-[calc(100vw-2rem)] sm:w-[420px] h-[calc(100vh-5rem)] sm:h-[650px] max-h-[800px] glass rounded-[2rem] sm:rounded-[3rem] z-[100] flex flex-col overflow-hidden shadow-[0_32px_64px_-12px_rgba(22,198,12,0.25)] border-[#16C60C]/30"
         >
           {/* Header - Fixed Z-index for Close Button */}
           <div className="p-8 bg-black/60 backdrop-blur-2xl border-b border-white/5 flex items-center justify-between relative overflow-hidden z-20">
             <div className="absolute inset-0 bg-gradient-to-r from-[#16C60C]/10 to-transparent -z-10"></div>
             <div className="flex items-center gap-4">
               <div className="relative">
-                 <div className="w-12 h-12 rounded-2xl bg-[#16C60C] flex items-center justify-center text-white shadow-lg shadow-[#16C60C]/30">
-                    <Bot size={28} />
-                 </div>
-                 <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-[#16C60C] border-2 border-black rounded-full animate-pulse"></div>
+                <div className="w-12 h-12 rounded-2xl bg-[#16C60C] flex items-center justify-center text-white shadow-lg shadow-[#16C60C]/30">
+                  <Bot size={28} />
+                </div>
+                <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-[#16C60C] border-2 border-black rounded-full animate-pulse"></div>
               </div>
               <div>
                 <h4 className="font-black text-sm uppercase tracking-[0.2em] leading-none">Mikmik AI</h4>
                 <p className="text-[10px] font-bold text-[#16C60C] mt-1.5 flex items-center gap-1.5 uppercase tracking-widest">
-                   <span className="w-1.5 h-1.5 bg-[#16C60C] rounded-full"></span> Expert Agency
+                  <span className="w-1.5 h-1.5 bg-[#16C60C] rounded-full"></span> Expert Agency
                 </p>
               </div>
             </div>
             {/* Close Button Improved Hit Area */}
-            <button 
+            <button
               onClick={(e) => {
                 e.stopPropagation();
                 onClose();
@@ -162,17 +162,16 @@ export const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
           {/* Messages */}
           <div ref={scrollRef} className="flex-grow overflow-y-auto p-8 space-y-6 scrollbar-hide bg-black/20">
             {messages.map((m, i) => (
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                key={i} 
+                key={i}
                 className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}
               >
-                <div className={`max-w-[90%] px-6 py-5 rounded-[2.2rem] ${
-                  m.role === 'user' 
-                    ? 'bg-[#16C60C] text-white font-bold shadow-xl shadow-[#16C60C]/10 rounded-tr-none' 
+                <div className={`max-w-[90%] px-6 py-5 rounded-[2.2rem] ${m.role === 'user'
+                    ? 'bg-[#16C60C] text-white font-bold shadow-xl shadow-[#16C60C]/10 rounded-tr-none'
                     : 'bg-white/5 text-white/60 border border-white/10 rounded-tl-none'
-                }`}>
+                  }`}>
                   <RichText content={m.text} />
                 </div>
               </motion.div>
@@ -193,11 +192,11 @@ export const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
 
           {/* Quick Actions */}
           <div className="px-8 pb-4 pt-2 bg-black/20">
-             <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide no-scrollbar">
-                {quickActions.map((action, i) => (
-                  <QuickReply key={i} icon={action.icon} text={action.text} onClick={() => handleSend(action.query)} />
-                ))}
-             </div>
+            <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide no-scrollbar">
+              {quickActions.map((action, i) => (
+                <QuickReply key={i} icon={action.icon} text={action.text} onClick={() => handleSend(action.query)} />
+              ))}
+            </div>
           </div>
 
           {/* Input Area */}
@@ -214,9 +213,8 @@ export const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
               <button
                 onClick={() => handleSend()}
                 disabled={!input.trim() || loading}
-                className={`absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-xl flex items-center justify-center transition-all ${
-                  input.trim() && !loading ? 'bg-[#16C60C] text-white' : 'text-white/20 cursor-not-allowed'
-                }`}
+                className={`absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-xl flex items-center justify-center transition-all ${input.trim() && !loading ? 'bg-[#16C60C] text-white' : 'text-white/20 cursor-not-allowed'
+                  }`}
               >
                 <Send size={18} />
               </button>

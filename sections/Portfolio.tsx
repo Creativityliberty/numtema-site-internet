@@ -51,16 +51,16 @@ export const Portfolio: React.FC = () => {
   ];
 
   return (
-    <section id="realisations" className="py-40 px-6 bg-white/[0.01]">
+    <section id="realisations" className="py-20 sm:py-40 px-4 sm:px-6 bg-white/[0.01]">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row items-end justify-between mb-24 gap-10">
+        <div className="flex flex-col md:flex-row items-end justify-between mb-12 sm:mb-24 gap-6 sm:gap-10">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="max-w-xl"
           >
-            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6 uppercase">Réalisations Réelles</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter mb-4 sm:mb-6 uppercase">Réalisations Réelles</h2>
             <p className="text-white/50 text-lg font-medium italic leading-relaxed">
               "Des sites clairs, modernes, et orientés clients."
               <br />Regardez ce que nous avons déjà construit pour nos partenaires.
@@ -77,7 +77,7 @@ export const Portfolio: React.FC = () => {
           </motion.button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 lg:gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-10 lg:gap-20">
           {works.map((work, i) => (
             <motion.a
               key={i}
@@ -88,7 +88,7 @@ export const Portfolio: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group flex flex-col gap-8"
+              className="group flex flex-col gap-6 sm:gap-8"
             >
               <div className="aspect-video bg-white/5 rounded-[3rem] overflow-hidden border border-white/5 group-hover:border-[#16C60C]/40 transition-all relative shadow-2xl">
                 <img
@@ -102,8 +102,8 @@ export const Portfolio: React.FC = () => {
                 </div>
               </div>
               <div>
-                <span className="text-[#16C60C] text-xs font-black uppercase tracking-[0.3em] mb-3 block">{work.type}</span>
-                <h3 className="text-3xl font-black tracking-tighter mb-4">{work.name}</h3>
+                <span className="text-[#16C60C] text-xs font-black uppercase tracking-[0.3em] mb-2 sm:mb-3 block">{work.type}</span>
+                <h3 className="text-2xl sm:text-3xl font-black tracking-tighter mb-3 sm:mb-4">{work.name}</h3>
                 <p className="text-white/40 text-base font-medium leading-relaxed max-w-lg">{work.desc}</p>
               </div>
             </motion.a>

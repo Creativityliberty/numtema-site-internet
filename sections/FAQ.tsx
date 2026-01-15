@@ -30,18 +30,18 @@ export const FAQ: React.FC = () => {
   ];
 
   return (
-    <section className="py-40 px-6">
+    <section className="py-20 sm:py-40 px-4 sm:px-6">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-center mb-24 uppercase">FAQ globale</h2>
-        
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter text-center mb-12 sm:mb-24 uppercase">FAQ globale</h2>
+
         <div className="space-y-4">
           {questions.map((q, i) => (
             <div key={i} className="glass rounded-3xl overflow-hidden border-white/5">
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full flex items-center justify-between p-8 text-left hover:bg-white/5 transition-all"
+                className="w-full flex items-center justify-between p-6 sm:p-8 text-left hover:bg-white/5 transition-all min-h-[56px]"
               >
-                <span className="text-lg font-black tracking-tight">{q.q}</span>
+                <span className="text-base sm:text-lg font-black tracking-tight pr-4">{q.q}</span>
                 {openIndex === i ? <Minus size={20} className="text-[#16C60C]" /> : <Plus size={20} />}
               </button>
               <AnimatePresence>

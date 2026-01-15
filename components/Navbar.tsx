@@ -17,8 +17,8 @@ export const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-between glass px-6 py-2.5 rounded-full border-white/10 shadow-2xl">
+    <nav className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-3 sm:py-4">
+      <div className="max-w-7xl mx-auto flex items-center justify-between glass px-4 sm:px-6 py-2 sm:py-2.5 rounded-full border-white/10 shadow-2xl">
         <Link to="/" className="flex items-center gap-3 group">
           <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden border border-white/20 transition-transform group-hover:scale-110">
             <img src={CONFIG.brand.logoUrl} alt="Logo" className="w-full h-full object-cover" />
@@ -72,7 +72,7 @@ export const Navbar: React.FC = () => {
                   key={link.name}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className="text-2xl font-black tracking-tighter uppercase"
+                  className="text-xl font-black tracking-tighter uppercase py-3 min-h-[48px] flex items-center"
                 >
                   {link.name}
                 </Link>
