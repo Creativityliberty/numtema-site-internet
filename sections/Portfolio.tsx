@@ -25,7 +25,7 @@ export const Portfolio: React.FC = () => {
       url: CONFIG.links.mayamedium,
       type: "Guidance Spirituelle & Voyance",
       desc: "Un univers mystique, premium et apaisant. Design aux tons chauds et atmosphère spirituelle haut de gamme.",
-      image: "https://images.unsplash.com/photo-1572248521570-58823296c64f?q=80&w=800&auto=format&fit=crop"
+      image: "/images/portfolio/maya-medium.png"
     },
     {
       name: "Tourma-Line",
@@ -40,6 +40,13 @@ export const Portfolio: React.FC = () => {
       type: "Restauration & Terrasse",
       desc: "L'élégance culinaire à la française. Site vitrine mettant en avant une terrasse idyllique et une cuisine d'exception.",
       image: "/images/portfolio/atelier-marion.png"
+    },
+    {
+      name: "SKE Logistics",
+      url: CONFIG.links.skelogistics,
+      type: "Import-Export & Logistique",
+      desc: "Votre partenaire logistique de confiance. Solution complète pour les échanges France-Afrique avec une interface professionnelle.",
+      image: "/images/portfolio/skelogistics.png"
     }
   ];
 

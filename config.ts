@@ -8,7 +8,7 @@ export const CONFIG = {
     logoUrl: "https://www.bing.com/th/id/OIP.PIziIIufgeuJt8Ej9hb12QHaHa?w=171&h=211&c=8&rs=1&qlt=90&r=0&o=6&dpr=1.1&pid=3.1&rm=2"
   },
   contact: {
-    whatsapp: "33745434264", 
+    whatsapp: "33745434264",
     email: "contact@numtema.agency",
     phone: "+33 7 45 43 42 64"
   },
@@ -22,7 +22,8 @@ export const CONFIG = {
     tourmaline: "https://www.tourma-line.fr/",
     delharmonie: "https://delharmoniechezsoi.com",
     atelierMarion: "https://latelierdemarion.fr/",
-    numtemaface: "https://www.numtemaface.fr/"
+    numtemaface: "https://www.numtemaface.fr/",
+    skelogistics: "https://www.skelogistics.com/"
   },
   pricing: {
     packs: [
