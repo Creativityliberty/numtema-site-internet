@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Sparkles, Zap, ShieldCheck, Globe } from 'lucide-react';
 import { CONFIG } from '../config';
 
@@ -50,6 +50,16 @@ const wordItem = {
 };
 
 export const Hero: React.FC = () => {
+  const [textIndex, setTextIndex] = useState(0);
+  const texts = ["en 72 Heures", "en 3 jours"];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTextIndex((prev) => (prev + 1) % texts.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative min-h-screen pt-40 pb-20 px-6 flex flex-col items-center justify-center overflow-hidden">
       {/* Background Decor */}
@@ -116,9 +126,34 @@ export const Hero: React.FC = () => {
           >
             visibilité
           </motion.span> 
-          {["en", "72", "Heures"].map((word, i) => (
-            <motion.span key={i} variants={wordItem} className="inline-block uppercase">{word}</motion.span>
-          ))}
+          
+          <div className="relative flex items-center justify-center min-w-[300px] md:min-w-[600px] h-[1em]">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={textIndex}
+                initial={{ y: 40, opacity: 0, filter: 'blur(10px)' }}
+                animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }}
+                exit={{ y: -40, opacity: 0, filter: 'blur(10px)' }}
+                transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
+                className="flex items-center gap-x-4 md:gap-x-8 whitespace-nowrap"
+              >
+                <span className="inline-block uppercase">{texts[textIndex]}</span>
+                
+                {textIndex === 1 && (
+                  <div className="relative inline-block w-0">
+                    <motion.span 
+                      initial={{ scale: 0, rotate: -35, opacity: 0, x: -20 }}
+                      animate={{ scale: 1, rotate: -15, opacity: 1, x: 0 }}
+                      transition={{ delay: 0.3, type: 'spring', stiffness: 260, damping: 20 }}
+                      className="absolute -top-10 md:-top-20 left-4 md:left-8 font-brush text-[60px] md:text-[100px] text-red-600 leading-none select-none drop-shadow-2xl z-50"
+                    >
+                      MAX
+                    </motion.span>
+                  </div>
+                )}
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </motion.h1>
 
         <motion.p
