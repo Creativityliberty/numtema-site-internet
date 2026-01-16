@@ -15,6 +15,7 @@ export const Navbar: React.FC = () => {
     { name: i18n.t('nav.portfolio'), path: '/realisations' },
     { name: i18n.t('nav.services'), path: '/#services' },
     { name: i18n.t('nav.formations'), path: '/formations' },
+    { name: i18n.t('nav.applications'), path: 'https://v0-creative-portfolio-virid.vercel.app/', external: true },
     { name: i18n.t('nav.contact'), path: '/contact' },
   ];
 
@@ -33,13 +34,27 @@ export const Navbar: React.FC = () => {
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center gap-12">
           {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              to={link.path}
-              className="text-[10px] font-black uppercase tracking-[0.25em] opacity-60 hover:opacity-100 hover:text-[#16C60C] transition-all"
-            >
-              {link.name}
-            </Link>
+            {
+              link.external ? (
+                <a
+                  key={link.name}
+                  href={link.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[10px] font-black uppercase tracking-[0.25em] opacity-60 hover:opacity-100 hover:text-[#16C60C] transition-all"
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  className="text-[10px] font-black uppercase tracking-[0.25em] opacity-60 hover:opacity-100 hover:text-[#16C60C] transition-all"
+                >
+                  {link.name}
+                </Link>
+              )
+            }
           ))}
         </div>
 
@@ -71,14 +86,29 @@ export const Navbar: React.FC = () => {
           >
             <div className="flex flex-col gap-6">
               {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.path}
-                  onClick={() => setIsOpen(false)}
-                  className="text-xl font-black tracking-tighter uppercase py-3 min-h-[48px] flex items-center"
-                >
-                  {link.name}
-                </Link>
+                {
+                  link.external ? (
+                    <a
+                      key={link.name}
+                      href={link.path}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setIsOpen(false)}
+                      className="text-xl font-black tracking-tighter uppercase py-3 min-h-[48px] flex items-center"
+                    >
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link
+                      key={link.name}
+                      to={link.path}
+                      onClick={() => setIsOpen(false)}
+                      className="text-xl font-black tracking-tighter uppercase py-3 min-h-[48px] flex items-center"
+                    >
+                      {link.name}
+                    </Link>
+                  )
+                }
               ))}
               <a
                 href={`https://wa.me/${CONFIG.contact.whatsapp}`}

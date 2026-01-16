@@ -6,7 +6,8 @@ export const en = {
         services: 'Services',
         formations: 'Training',
         contact: 'Contact',
-        whatsapp: 'WHATSAPP'
+        whatsapp: 'WHATSAPP',
+        applications: 'Created Applications'
     },
     hero: {
         badge: '3-DAY DELIVERY • YOUR MOBILE-FIRST SITE • ACCESSIBLE',
