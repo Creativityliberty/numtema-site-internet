@@ -20,12 +20,12 @@ export const Navbar: React.FC = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-3 sm:py-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-between glass px-4 sm:px-6 py-2 sm:py-2.5 rounded-full border-white/10 shadow-2xl">
+      <div className="max-w-7xl mx-auto flex items-center justify-between glass px-3 sm:px-6 py-2 rounded-full border-white/10 shadow-2xl">
         <Link to="/" className="flex items-center gap-3 group">
           <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden border border-white/20 transition-transform group-hover:scale-110">
             <img src={CONFIG.brand.logoUrl} alt="Logo" className="w-full h-full object-cover" />
           </div>
-          <span className="text-xl font-black tracking-tighter uppercase hidden sm:block">
+          <span className="text-base sm:text-xl font-black tracking-tighter uppercase hidden md:block">
             {CONFIG.brand.name}<span className="text-[#16C60C]">{CONFIG.brand.suffix}</span>
           </span>
         </Link>
@@ -43,7 +43,7 @@ export const Navbar: React.FC = () => {
           ))}
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-4">
           <LanguageSwitcher />
           <a
             href={`https://wa.me/${CONFIG.contact.whatsapp}`}

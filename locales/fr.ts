@@ -58,6 +58,37 @@ export const fr = {
         coverage: 'Couverture',
         coverageText: 'France • Afrique • Europe'
     },
+    showcase: {
+        badge: 'Showcase Immersif',
+        title: 'UN UNIVERS DE',
+        titleHighlight: 'POSSIBILITÉS',
+        description: '"Votre projet mérite une envergure sans limite. Voici un aperçu de l\'excellence que nous déployons."'
+    },
+    process: {
+        title: 'COMMENT ON TRAVAILLE',
+        titleHighlight: '?',
+        quote: '"Moi c\'est {owner}. J\'aide les entrepreneurs à transformer leurs idées en présence digitale pro et crédible."',
+        availability: 'Disponible France/Afrique',
+        commitment: 'Je travaille avec toi, pas juste pour toi. Je ne disparais pas après le brief.',
+        steps: [
+            {
+                title: 'Brief WhatsApp',
+                desc: 'Vous nous écrivez, on clarifie votre besoin et on choisit le pack.'
+            },
+            {
+                title: 'Maquette',
+                desc: 'On crée la structure et le design. Vous validez avant qu\'on développe.'
+            },
+            {
+                title: 'Développement',
+                desc: 'On donne vie à votre site avec les meilleures technologies.'
+            },
+            {
+                title: 'Livraison',
+                desc: 'On met en ligne, on fait les retouches et on vous accompagne.'
+            }
+        ]
+    },
     portfolio: {
         title: 'Mes Réalisations',
         description: '"Sites clairs, mobiles, orientés clients."',

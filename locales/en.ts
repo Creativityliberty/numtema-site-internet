@@ -58,6 +58,37 @@ export const en = {
         coverage: 'Coverage',
         coverageText: 'France • Africa • Europe'
     },
+    showcase: {
+        badge: 'Immersive Showcase',
+        title: 'A UNIVERSE OF',
+        titleHighlight: 'POSSIBILITIES',
+        description: '"Your project deserves unlimited scope. Here\'s a glimpse of the excellence we deploy."'
+    },
+    process: {
+        title: 'HOW WE WORK',
+        titleHighlight: '?',
+        quote: '"I\'m {owner}. I help entrepreneurs transform their ideas into professional and credible digital presence."',
+        availability: 'Available France/Africa',
+        commitment: 'I work with you, not just for you. I don\'t disappear after the brief.',
+        steps: [
+            {
+                title: 'WhatsApp Brief',
+                desc: 'You write to us, we clarify your need and choose the pack.'
+            },
+            {
+                title: 'Mockup',
+                desc: 'We create the structure and design. You validate before we develop.'
+            },
+            {
+                title: 'Development',
+                desc: 'We bring your site to life with the best technologies.'
+            },
+            {
+                title: 'Delivery',
+                desc: 'We put it online, make adjustments and support you.'
+            }
+        ]
+    },
     portfolio: {
         title: 'My Projects',
         description: '"Clear, mobile, client-focused sites."',
