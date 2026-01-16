@@ -1,8 +1,8 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MonitorSmartphone, BrainCircuit, Zap, Globe2, ShieldCheck, Rocket } from 'lucide-react';
 import { cn } from '../lib/utils';
+import { i18n } from '../lib/i18n';
 
 const BentoCard = ({
   children,
@@ -72,7 +72,7 @@ export const Services: React.FC = () => {
               viewport={{ once: true }}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter uppercase leading-[0.9]"
             >
-              MES SOLUTIONS <br /><span className="green-gradient">MOBILE-FIRST</span>
+              {i18n.t('services.title')} <br /><span className="green-gradient">{i18n.t('services.titleHighlight')}</span>
             </motion.h2>
           </div>
           <motion.p
@@ -81,16 +81,16 @@ export const Services: React.FC = () => {
             viewport={{ once: true }}
             className="text-white/40 font-medium max-w-sm italic text-right hidden md:block"
           >
-            "Je ne crée pas des outils, je bâtis ton empire digital."
+            {i18n.t('services.quote')}
           </motion.p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
           {/* Main Service Card */}
           <BentoCard
-            title="SITES WEB HAUTE-COUTURE"
+            title={i18n.t('services.web.title')}
             icon={MonitorSmartphone}
-            description="L'équilibre parfait entre design mobile et conversion. Pensé pour ton téléphone d'abord."
+            description={i18n.t('services.web.desc')}
             className="md:col-span-2 md:row-span-2 min-h-[400px]"
             delay={0.1}
           >
@@ -109,9 +109,9 @@ export const Services: React.FC = () => {
 
           {/* AI Lab Card */}
           <BentoCard
-            title="IA BUSINESS LAB"
+            title={i18n.t('services.ai.title')}
             icon={BrainCircuit}
-            description="J'automatise tes ventes et ton support client avec l'IA sur-mesure."
+            description={i18n.t('services.ai.desc')}
             className="md:col-span-1"
             delay={0.2}
           />
@@ -131,9 +131,9 @@ export const Services: React.FC = () => {
 
           {/* Reach Card */}
           <BentoCard
-            title="RAYONNEMENT GLOBAL"
+            title={i18n.t('services.global.title')}
             icon={Globe2}
-            description="De Paris à Abidjan, je connecte les entrepreneurs au monde entier."
+            description={i18n.t('services.global.desc')}
             className="md:col-span-2"
             delay={0.4}
           >

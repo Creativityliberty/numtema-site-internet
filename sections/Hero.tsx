@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Sparkles, Zap, ShieldCheck, Globe } from 'lucide-react';
 import { CONFIG } from '../config';
+import { i18n } from '../lib/i18n';
 
 const container = {
   hidden: { opacity: 0 },
@@ -51,7 +52,7 @@ const wordItem = {
 
 export const Hero: React.FC = () => {
   const [textIndex, setTextIndex] = useState(0);
-  const texts = ["en 72 Heures", "en 3 jours"];
+  const texts = [i18n.t('hero.time1'), i18n.t('hero.time2')];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -110,21 +111,21 @@ export const Hero: React.FC = () => {
           className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border border-[#16C60C]/30 glass text-[8px] sm:text-[10px] font-black uppercase tracking-[0.3em] sm:tracking-[0.4em] mb-8 sm:mb-12 text-[#16C60C] shadow-lg shadow-[#16C60C]/10"
         >
           <Sparkles size={14} className="animate-pulse" />
-          LIVRAISON 3 JOURS • TON SITE MOBILE-FIRST • ACCESSIBLE
+          {i18n.t('hero.badge')}
         </motion.div>
 
         <motion.h1
           variants={wordContainer}
           className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[8rem] font-black tracking-tighter leading-[0.8] mb-8 sm:mb-12 lg:mb-16 flex flex-wrap justify-center gap-x-3 sm:gap-x-4 md:gap-x-8"
         >
-          {["Propulsez", "votre"].map((word, i) => (
+          {[i18n.t('hero.title1'), i18n.t('hero.title2')].map((word, i) => (
             <motion.span key={i} variants={wordItem} className="inline-block uppercase">{word}</motion.span>
           ))}
           <motion.span
             variants={wordItem}
             className="green-gradient italic w-full block overflow-hidden pb-4 uppercase"
           >
-            visibilité
+            {i18n.t('hero.title3')}
           </motion.span>
 
           <div className="relative flex items-center justify-center min-w-[300px] md:min-w-[600px] h-[1em]">
@@ -147,7 +148,7 @@ export const Hero: React.FC = () => {
                       transition={{ delay: 0.3, type: 'spring', stiffness: 260, damping: 20 }}
                       className="absolute -top-10 md:-top-20 left-4 md:left-8 font-brush text-[60px] md:text-[100px] text-red-600 leading-none select-none drop-shadow-2xl z-50"
                     >
-                      MAX
+                      {i18n.t('hero.timeMax')}
                     </motion.span>
                   </div>
                 )}
@@ -160,8 +161,8 @@ export const Hero: React.FC = () => {
           variants={item}
           className="text-base sm:text-lg md:text-2xl font-medium text-white/60 mb-12 sm:mb-16 max-w-3xl mx-auto leading-relaxed px-4"
         >
-          Je crée ton site qui inspire confiance et génère des clients.
-          <span className="block mt-4 text-white italic font-serif">"Ton business mérite d'être en ligne dès maintenant."</span>
+          {i18n.t('hero.description')}
+          <span className="block mt-4 text-white italic font-serif">{i18n.t('hero.quote')}</span>
         </motion.p>
 
         <motion.div
@@ -172,13 +173,13 @@ export const Hero: React.FC = () => {
             href={`https://wa.me/${CONFIG.contact.whatsapp}`}
             className="w-full sm:w-auto bg-[#16C60C] text-white px-10 sm:px-14 py-5 sm:py-7 rounded-full font-black text-base sm:text-lg flex items-center justify-center gap-3 sm:gap-4 hover:scale-105 active:scale-95 transition-all shadow-2xl shadow-[#16C60C]/40 min-h-[56px]"
           >
-            Parle-moi sur WhatsApp <ArrowRight size={22} />
+            {i18n.t('hero.ctaWhatsapp')} <ArrowRight size={22} />
           </a>
           <button
             onClick={() => document.getElementById('packs')?.scrollIntoView({ behavior: 'smooth' })}
             className="w-full sm:w-auto glass px-10 sm:px-14 py-5 sm:py-7 rounded-full font-black text-base sm:text-lg hover:border-[#16C60C]/50 transition-all border-white/5 active:scale-95 min-h-[56px]"
           >
-            Voir mes packs
+            {i18n.t('hero.ctaPacks')}
           </button>
         </motion.div>
 
@@ -186,9 +187,9 @@ export const Hero: React.FC = () => {
           variants={item}
           className="mt-24 lg:mt-32 flex flex-wrap items-center justify-center gap-8 md:gap-20 lg:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all duration-500"
         >
-          <div className="flex items-center gap-3 text-sm font-black tracking-widest transition-transform hover:scale-110 cursor-default"><Zap size={18} className="text-[#16C60C]" /> 48H À 72H</div>
-          <div className="flex items-center gap-3 text-sm font-black tracking-widest transition-transform hover:scale-110 cursor-default"><Globe size={18} className="text-[#16C60C]" /> FRANCE & AFRIQUE</div>
-          <div className="flex items-center gap-3 text-sm font-black tracking-widest transition-transform hover:scale-110 cursor-default"><ShieldCheck size={18} className="text-[#16C60C]" /> QUALITÉ STUDIO</div>
+          <div className="flex items-center gap-3 text-sm font-black tracking-widest transition-transform hover:scale-110 cursor-default"><Zap size={18} className="text-[#16C60C]" /> {i18n.t('hero.feature1')}</div>
+          <div className="flex items-center gap-3 text-sm font-black tracking-widest transition-transform hover:scale-110 cursor-default"><Globe size={18} className="text-[#16C60C]" /> {i18n.t('hero.feature2')}</div>
+          <div className="flex items-center gap-3 text-sm font-black tracking-widest transition-transform hover:scale-110 cursor-default"><ShieldCheck size={18} className="text-[#16C60C]" /> {i18n.t('hero.feature3')}</div>
         </motion.div>
       </motion.div>
     </section>

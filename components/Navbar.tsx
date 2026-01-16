@@ -3,17 +3,19 @@ import { Link } from 'react-router-dom';
 import { Menu, X, MessageSquare } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CONFIG } from '../config';
+import { LanguageSwitcher } from './LanguageSwitcher';
+import { i18n } from '../lib/i18n';
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Accueil', path: '/' },
-    { name: 'Packs Sites', path: '/#packs' },
-    { name: 'Réalisations', path: '/realisations' },
-    { name: 'Services', path: '/#services' },
-    { name: 'Formations', path: '/formations' },
-    { name: 'Contact', path: '/contact' },
+    { name: i18n.t('nav.home'), path: '/' },
+    { name: i18n.t('nav.packs'), path: '/#packs' },
+    { name: i18n.t('nav.portfolio'), path: '/realisations' },
+    { name: i18n.t('nav.services'), path: '/#services' },
+    { name: i18n.t('nav.formations'), path: '/formations' },
+    { name: i18n.t('nav.contact'), path: '/contact' },
   ];
 
   return (
@@ -42,11 +44,12 @@ export const Navbar: React.FC = () => {
         </div>
 
         <div className="flex items-center gap-4">
+          <LanguageSwitcher />
           <a
             href={`https://wa.me/${CONFIG.contact.whatsapp}`}
             className="hidden sm:flex items-center gap-2 bg-[#16C60C] text-white px-6 py-3 rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-white hover:text-black transition-all shadow-lg shadow-[#16C60C]/20"
           >
-            <MessageSquare size={14} className="fill-current" /> WHATSAPP
+            <MessageSquare size={14} className="fill-current" /> {i18n.t('nav.whatsapp')}
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -81,7 +84,7 @@ export const Navbar: React.FC = () => {
                 href={`https://wa.me/${CONFIG.contact.whatsapp}`}
                 className="flex items-center justify-center gap-2 bg-[#16C60C] text-white w-full py-5 rounded-2xl font-black uppercase tracking-widest mt-4"
               >
-                WhatsApp Maintenant
+                {i18n.t('nav.whatsapp')}
               </a>
             </div>
           </motion.div>
