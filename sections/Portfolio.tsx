@@ -51,7 +51,7 @@ export const Portfolio: React.FC = () => {
   ];
 
   return (
-    <section id="realisations" className="py-20 sm:py-40 px-4 sm:px-6 bg-white/[0.01]">
+    <section id="realisations" className="py-20 sm:py-40 lg:py-48 px-4 sm:px-6 lg:px-8 bg-white/[0.01]">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-end justify-between mb-12 sm:mb-24 gap-6 sm:gap-10">
           <motion.div
@@ -77,7 +77,7 @@ export const Portfolio: React.FC = () => {
           </motion.button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-10 lg:gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-10 lg:gap-16 xl:gap-20">
           {works.map((work, i) => (
             <motion.a
               key={i}
@@ -90,7 +90,7 @@ export const Portfolio: React.FC = () => {
               transition={{ delay: i * 0.1 }}
               className="group flex flex-col gap-6 sm:gap-8"
             >
-              <div className="aspect-video bg-white/5 rounded-[3rem] overflow-hidden border border-white/5 group-hover:border-[#16C60C]/40 transition-all relative shadow-2xl">
+              <div className="aspect-video bg-white/5 rounded-[3rem] lg:rounded-[4rem] overflow-hidden border border-white/5 group-hover:border-[#16C60C]/40 group-hover:shadow-2xl group-hover:shadow-[#16C60C]/20 transition-all relative shadow-2xl">
                 <img
                   src={work.image}
                   alt={work.name}

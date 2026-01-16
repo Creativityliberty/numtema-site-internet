@@ -127,7 +127,7 @@ export const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
           initial={{ opacity: 0, scale: 0.9, y: 50, filter: 'blur(10px)' }}
           animate={{ opacity: 1, scale: 1, y: 0, filter: 'blur(0px)' }}
           exit={{ opacity: 0, scale: 0.9, y: 50, filter: 'blur(10px)' }}
-          className="fixed bottom-6 sm:bottom-28 right-4 sm:left-8 w-[calc(100vw-2rem)] sm:w-[420px] h-[calc(100vh-5rem)] sm:h-[650px] max-h-[800px] glass rounded-[2rem] sm:rounded-[3rem] z-[100] flex flex-col overflow-hidden shadow-[0_32px_64px_-12px_rgba(22,198,12,0.25)] border-[#16C60C]/30"
+          className="fixed bottom-6 sm:bottom-28 right-4 sm:left-8 lg:right-8 xl:right-12 w-[calc(100vw-2rem)] sm:w-[420px] h-[calc(100vh-5rem)] sm:h-[650px] max-h-[800px] glass rounded-[2rem] sm:rounded-[3rem] z-[100] flex flex-col overflow-hidden shadow-[0_32px_64px_-12px_rgba(22,198,12,0.25)] border-[#16C60C]/30"
         >
           {/* Header - Fixed Z-index for Close Button */}
           <div className="p-8 bg-black/60 backdrop-blur-2xl border-b border-white/5 flex items-center justify-between relative overflow-hidden z-20">
@@ -169,8 +169,8 @@ export const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
                 className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}
               >
                 <div className={`max-w-[90%] px-6 py-5 rounded-[2.2rem] ${m.role === 'user'
-                    ? 'bg-[#16C60C] text-white font-bold shadow-xl shadow-[#16C60C]/10 rounded-tr-none'
-                    : 'bg-white/5 text-white/60 border border-white/10 rounded-tl-none'
+                  ? 'bg-[#16C60C] text-white font-bold shadow-xl shadow-[#16C60C]/10 rounded-tr-none'
+                  : 'bg-white/5 text-white/60 border border-white/10 rounded-tl-none'
                   }`}>
                   <RichText content={m.text} />
                 </div>

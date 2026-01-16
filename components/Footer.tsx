@@ -6,9 +6,9 @@ import { CONFIG } from '../config';
 
 export const Footer: React.FC = () => {
    return (
-      <footer className="py-16 sm:py-24 px-4 sm:px-6 border-t border-white/5 bg-black">
+      <footer className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 border-t border-white/5 bg-black">
          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-10 sm:gap-16 mb-16 sm:mb-24">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-10 sm:gap-16 lg:gap-20 mb-16 sm:mb-24 lg:mb-32">
                <div className="md:col-span-2">
                   <Link to="/" className="flex items-center gap-4 mb-6">
                      <img src={CONFIG.brand.logoUrl} alt="Logo" className="w-12 h-12 object-contain rounded-full border border-white/10" />

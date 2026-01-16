@@ -61,7 +61,7 @@ export const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen pt-24 sm:pt-40 pb-12 sm:pb-20 px-4 sm:px-6 flex flex-col items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen pt-24 sm:pt-40 lg:pt-48 pb-12 sm:pb-20 lg:pb-24 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center overflow-hidden">
       {/* Background Decor */}
       <div className="absolute inset-0 hero-grid -z-10 opacity-30"></div>
 
@@ -115,7 +115,7 @@ export const Hero: React.FC = () => {
 
         <motion.h1
           variants={wordContainer}
-          className="text-4xl sm:text-6xl md:text-7xl lg:text-[9rem] font-black tracking-tighter leading-[0.8] mb-8 sm:mb-12 flex flex-wrap justify-center gap-x-3 sm:gap-x-4 md:gap-x-8"
+          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[8rem] font-black tracking-tighter leading-[0.8] mb-8 sm:mb-12 lg:mb-16 flex flex-wrap justify-center gap-x-3 sm:gap-x-4 md:gap-x-8"
         >
           {["Propulsez", "votre"].map((word, i) => (
             <motion.span key={i} variants={wordItem} className="inline-block uppercase">{word}</motion.span>
@@ -166,7 +166,7 @@ export const Hero: React.FC = () => {
 
         <motion.div
           variants={item}
-          className="flex flex-col sm:flex-row items-center justify-center gap-6 px-4"
+          className="flex flex-col sm:flex-row items-center justify-center gap-6 lg:gap-8 px-4"
         >
           <a
             href={`https://wa.me/${CONFIG.contact.whatsapp}`}
@@ -184,7 +184,7 @@ export const Hero: React.FC = () => {
 
         <motion.div
           variants={item}
-          className="mt-24 flex flex-wrap items-center justify-center gap-8 md:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-500"
+          className="mt-24 lg:mt-32 flex flex-wrap items-center justify-center gap-8 md:gap-20 lg:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all duration-500"
         >
           <div className="flex items-center gap-3 text-sm font-black tracking-widest transition-transform hover:scale-110 cursor-default"><Zap size={18} className="text-[#16C60C]" /> 48H À 72H</div>
           <div className="flex items-center gap-3 text-sm font-black tracking-widest transition-transform hover:scale-110 cursor-default"><Globe size={18} className="text-[#16C60C]" /> FRANCE & AFRIQUE</div>

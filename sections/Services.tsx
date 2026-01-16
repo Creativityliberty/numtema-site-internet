@@ -26,7 +26,7 @@ const BentoCard = ({
     transition={{ delay, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
     whileHover={{ y: -5 }}
     className={cn(
-      "glass group relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] border-white/5 p-6 sm:p-8 hover:border-[#16C60C]/30 transition-all duration-500",
+      "glass group relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] lg:rounded-[3rem] border-white/5 p-6 sm:p-8 lg:p-10 hover:border-[#16C60C]/30 hover:shadow-2xl hover:shadow-[#16C60C]/10 transition-all duration-500",
       className
     )}
   >
@@ -51,7 +51,7 @@ const BentoCard = ({
 
 export const Services: React.FC = () => {
   return (
-    <section id="services" className="py-20 sm:py-40 px-4 sm:px-6 relative overflow-hidden">
+    <section id="services" className="py-20 sm:py-40 lg:py-48 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute top-1/4 -right-20 w-96 h-96 bg-[#16C60C]/5 blur-[120px] rounded-full pointer-events-none" />
 
@@ -85,7 +85,7 @@ export const Services: React.FC = () => {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
           {/* Main Service Card */}
           <BentoCard
             title="SITES WEB HAUTE-COUTURE"

@@ -6,7 +6,7 @@ import { CONFIG } from '../config';
 
 export const Packs: React.FC = () => {
   return (
-    <section id="packs" className="py-20 sm:py-40 px-4 sm:px-6">
+    <section id="packs" className="py-20 sm:py-40 lg:py-48 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 sm:mb-24">
           <div className="text-[#16C60C] text-[10px] font-black uppercase tracking-[0.4em] mb-4">Tarification claire</div>
@@ -17,12 +17,12 @@ export const Packs: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {CONFIG.pricing.packs.map((pack) => (
             <motion.div
               key={pack.id}
               whileHover={{ scale: 1.02 }}
-              className={`flex flex-col p-10 rounded-[3rem] glass border relative transition-all ${pack.id === 'semi' ? 'border-[#16C60C]/40 ring-1 ring-[#16C60C]/20 shadow-2xl shadow-[#16C60C]/10' : 'border-white/5'}`}
+              className={`flex flex-col p-8 lg:p-10 rounded-[3rem] lg:rounded-[4rem] glass border relative transition-all hover:scale-105 hover:shadow-2xl hover:shadow-[#16C60C]/10 ${pack.id === 'semi' ? 'border-[#16C60C]/40 ring-1 ring-[#16C60C]/20 shadow-2xl shadow-[#16C60C]/10' : 'border-white/5'}`}
             >
               {pack.id === 'semi' && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#16C60C] text-white text-[9px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full">
