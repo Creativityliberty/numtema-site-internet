@@ -61,6 +61,27 @@ export const Portfolio: React.FC = () => {
       type: "Astrologie & Coaching de Vie",
       desc: "Découvrez votre carte de ciel de naissance. Un univers mystique et professionnel pour transformer votre vie grâce à l'astrologie.",
       image: "/images/portfolio/astheoris.png"
+    },
+    {
+      name: "ArcadeScript",
+      url: CONFIG.links.arcadescript,
+      type: "Générateur de Scripts Vidéo IA",
+      desc: "Unleash the power of the Four Heavenly Kings. Génère des scripts vidéo premium avec la vitesse et précision de Yashiro Nanakase.",
+      image: "/images/portfolio/arcadescript.png"
+    },
+    {
+      name: "CodeXplica",
+      url: CONFIG.links.codexplica,
+      type: "Architecture de Code par IA",
+      desc: "The architecture of code, explained by AI. Transforme n'importe quel dépôt GitHub en tutoriel structuré et pédagogique.",
+      image: "/images/portfolio/codexplica.png"
+    },
+    {
+      name: "Mangasia",
+      url: CONFIG.links.mangasia,
+      type: "Studio Manga IA",
+      desc: "Craft your saga with Gemini 3 & Imagen 4. From zero to published manga in minutes. AI-Powered Manga Studio.",
+      image: "/images/portfolio/mangasia.png"
     }
   ];
 

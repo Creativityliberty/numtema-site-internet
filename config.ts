@@ -25,7 +25,10 @@ export const CONFIG = {
     numtemaface: "https://www.numtemaface.fr/",
     skelogistics: "https://www.skelogistics.com/",
     inostconsulting: "https://inostconsulting.com/",
-    astheoris: "https://astheoris.fr/"
+    astheoris: "https://astheoris.fr/",
+    arcadescript: "https://arcadescript-9sgw.vercel.app/",
+    codexplica: "https://codxplica.vercel.app/",
+    mangasia: "https://mangasia.vercel.app/"
   },
   pricing: {
     packs: [
