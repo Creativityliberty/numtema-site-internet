@@ -193,6 +193,86 @@ export const fr = {
         madeWith: 'Fait avec excellence',
         poweredBy: 'Propulsé par la vision de Nümtema'
     },
+    pages: {
+        formations: {
+            title: 'Formations',
+            quote: '"Pas de théorie inutile. On va droit au résultat."',
+            fromPrice: 'À partir de',
+            cta: 'S\'inscrire / WhatsApp',
+            customTitle: 'Une formation sur-mesure ?',
+            customDesc: 'Tout se discute. On peut adapter le programme selon votre niveau et vos objectifs business.',
+            customCta: 'Discutons-en'
+        },
+        realisations: {
+            title: 'Nos Projets',
+            quote: '"Des sites clairs, modernes, et orientés clients."',
+            ctaTitle: 'Vous voulez le même résultat ?',
+            ctaDesc: 'Montrez-nous votre idée, votre budget, et on construit votre projet ensemble. Tout se discute.',
+            ctaCta: 'Lancer mon projet'
+        },
+        about: {
+            badge: 'L\'histoire de Nümtema',
+            title: 'L\'Agence qui',
+            titleHighlight: 'casse les codes',
+            quote: '"Nümtema n\'est pas une usine à sites. C\'est un atelier de haute couture digitale où chaque pixel est pensé pour la conversion."',
+            description: 'Fondée par Lionel Numtema, notre agence est née d\'un constat simple : le web professionnel est devenu trop lent et trop complexe pour les entrepreneurs qui ont besoin de résultats immédiats. Nous avons décidé de simplifier tout ça en proposant une livraison ultra-rapide sans jamais sacrifier l\'excellence.',
+            founderRole: 'Fondateur & Visionnaire',
+            badge2: 'Tout se discute !',
+            values: [
+                {
+                    title: 'Vitesse',
+                    text: 'Nous livrons là où les autres font des devis. 72H pour un site pro.'
+                },
+                {
+                    title: 'Fiabilité',
+                    text: 'Un accompagnement humain, constant, de France jusqu\'en Afrique.'
+                },
+                {
+                    title: 'Passion',
+                    text: 'Nous aimons ce que nous faisons, et cela se voit dans nos designs.'
+                }
+            ],
+            whyTitle: 'Pourquoi "Nümtema" ?',
+            whyDesc: 'C\'est plus qu\'un nom, c\'est une promesse de visibilité et de croissance. Nous croyons que chaque business, peu importe sa taille, mérite une armure digitale premium.',
+            whyCta: 'Discuter avec Lionel'
+        },
+        contact: {
+            title: 'Boostez votre',
+            titleHighlight: 'visibilité',
+            quote: '"Tout se discute : l\'objectif c\'est de rendre réelle votre vision." Dites-nous ce que vous avez en tête, Lionel s\'adapte à votre besoin.',
+            whatsappTitle: 'WhatsApp (Le plus rapide)',
+            whatsappDesc: 'Réponse sous 5 min en moyenne',
+            phoneTitle: 'Appel direct',
+            phoneDesc: 'Parlons de votre projet de vive voix',
+            formTitle: 'Briefez-nous ici',
+            labelName: 'Nom complet',
+            labelEmail: 'Email',
+            labelProject: 'Votre Projet',
+            placeholderName: 'Votre nom',
+            placeholderEmail: 'email@exemple.com',
+            placeholderProject: 'Expliquez-nous votre vision et votre budget...',
+            submitBtn: 'Envoyer le brief sur WhatsApp',
+            engagementsTitle: 'Nos Engagements',
+            engagementsSubtitle: 'Pourquoi choisir Nümtema Agency pour votre business.',
+            engagements: [
+                {
+                    title: 'Transparence Totale',
+                    desc: 'Aucun coût caché. Vous savez exactement où va chaque euro investi dans votre visibilité.'
+                },
+                {
+                    title: 'Vitesse 72H',
+                    desc: 'Nous respectons nos délais. Un site professionnel livré en 3 jours max pour les packs Starter et Pro.'
+                },
+                {
+                    title: 'Qualité Premium',
+                    desc: 'Pas de templates génériques. Chaque design est soigné pour refléter l\'excellence de votre marque.'
+                }
+            ],
+            finalTitle: 'On commence quand ?',
+            finalDesc: 'Rejoignez les entrepreneurs qui ont déjà franchi le pas vers une présence digitale de haut niveau.',
+            finalCta: 'Lancer ma transformation'
+        }
+    },
     chatbot: {
         title: 'Mikmik',
         subtitle: 'Assistant IA',
