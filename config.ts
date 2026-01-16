@@ -23,7 +23,9 @@ export const CONFIG = {
     delharmonie: "https://delharmoniechezsoi.com",
     atelierMarion: "https://latelierdemarion.fr/",
     numtemaface: "https://www.numtemaface.fr/",
-    skelogistics: "https://www.skelogistics.com/"
+    skelogistics: "https://www.skelogistics.com/",
+    inostconsulting: "https://inostconsulting.com/",
+    astheoris: "https://astheoris.fr/"
   },
   pricing: {
     packs: [

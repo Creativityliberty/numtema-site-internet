@@ -29,6 +29,8 @@ export const chatWithMikmik = async (userMessage: string, history: { role: strin
       - Tourma-Line: https://www.tourma-line.fr/ (Soins énergétiques) ![Tourma-Line](/images/portfolio/tourmaline.png)
       - L'Atelier de Marion: https://latelierdemarion.fr/ (Restauration) ![L'Atelier de Marion](/images/portfolio/atelier-marion.png)
       - SKE Logistics: https://www.skelogistics.com/ (Import-Export & Logistique) ![SKE Logistics](/images/portfolio/skelogistics.png)
+      - Inost Consulting: https://inostconsulting.com/ (Formations & Coaching) ![Inost Consulting](/images/portfolio/inost-consulting.png)
+      - Asthéoris: https://astheoris.fr/ (Astrologie & Coaching) ![Asthéoris](/images/portfolio/astheoris.png)
       
       CONTACT:
       - WhatsApp: ${CONFIG.contact.phone}

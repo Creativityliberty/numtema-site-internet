@@ -47,6 +47,20 @@ export const Portfolio: React.FC = () => {
       type: "Import-Export & Logistique",
       desc: "Votre partenaire logistique de confiance. Solution complète pour les échanges France-Afrique avec une interface professionnelle.",
       image: "/images/portfolio/skelogistics.png"
+    },
+    {
+      name: "Inost Consulting",
+      url: CONFIG.links.inostconsulting,
+      type: "Formations & Coaching Professionnel",
+      desc: "Plateforme de formations et coaching professionnel. Design moderne et professionnel pour accompagner les entrepreneurs vers le succès.",
+      image: "/images/portfolio/inost-consulting.png"
+    },
+    {
+      name: "Asthéoris",
+      url: CONFIG.links.astheoris,
+      type: "Astrologie & Coaching de Vie",
+      desc: "Découvrez votre carte de ciel de naissance. Un univers mystique et professionnel pour transformer votre vie grâce à l'astrologie.",
+      image: "/images/portfolio/astheoris.png"
     }
   ];
 
