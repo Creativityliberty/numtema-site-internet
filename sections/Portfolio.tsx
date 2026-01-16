@@ -1,86 +1,87 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink } from 'lucide-react';
+import { ArrowRight, ExternalLink } from 'lucide-react';
 import { CONFIG } from '../config';
+import { i18n } from '../lib/i18n';
 
 export const Portfolio: React.FC = () => {
   const works = [
     {
       name: "Del'Harmonie Chez Soi",
       url: CONFIG.links.delharmonie,
-      type: "Bien-être & Harmonisation",
-      desc: "L'élégance au service du soin. Un univers visuel doux et professionnel pour le bien-être de l'habitat et de l'esprit.",
+      type: i18n.t('portfolio.projects.delharmonie.type'),
+      desc: i18n.t('portfolio.projects.delharmonie.desc'),
       image: "/images/portfolio/delharmonie.png"
     },
     {
       name: "Nümtema Face",
       url: CONFIG.links.numtemaface,
-      type: "Lead Generation Machine",
-      desc: "Transformez vos visiteurs en clients avec des funnels vidéo interactifs. Une interface tech, moderne et ultra-efficace.",
+      type: i18n.t('portfolio.projects.numtemaface.type'),
+      desc: i18n.t('portfolio.projects.numtemaface.desc'),
       image: "/images/portfolio/numtema-face.png"
     },
     {
       name: "Maya Medium",
       url: CONFIG.links.mayamedium,
-      type: "Guidance Spirituelle & Voyance",
-      desc: "Un univers mystique, premium et apaisant. Design aux tons chauds et atmosphère spirituelle haut de gamme.",
+      type: i18n.t('portfolio.projects.mayamedium.type'),
+      desc: i18n.t('portfolio.projects.mayamedium.desc'),
       image: "/images/portfolio/maya-medium.png"
     },
     {
       name: "Tourma-Line",
       url: CONFIG.links.tourmaline,
-      type: "Guidance & Soins Énergétiques",
-      desc: "Plongez dans un univers naturel et mystique. Navigation fluide pour découvrir le potentiel de votre chemin de vie.",
+      type: i18n.t('portfolio.projects.tourmaline.type'),
+      desc: i18n.t('portfolio.projects.tourmaline.desc'),
       image: "/images/portfolio/tourmaline.png"
     },
     {
       name: "L'Atelier de Marion",
       url: CONFIG.links.atelierMarion,
-      type: "Restauration & Terrasse",
-      desc: "L'élégance culinaire à la française. Site vitrine mettant en avant une terrasse idyllique et une cuisine d'exception.",
+      type: i18n.t('portfolio.projects.ateliermarion.type'),
+      desc: i18n.t('portfolio.projects.ateliermarion.desc'),
       image: "/images/portfolio/atelier-marion.png"
     },
     {
       name: "SKE Logistics",
       url: CONFIG.links.skelogistics,
-      type: "Import-Export & Logistique",
-      desc: "Votre partenaire logistique de confiance. Solution complète pour les échanges France-Afrique avec une interface professionnelle.",
+      type: i18n.t('portfolio.projects.skelogistics.type'),
+      desc: i18n.t('portfolio.projects.skelogistics.desc'),
       image: "/images/portfolio/skelogistics.png"
     },
     {
       name: "Inost Consulting",
       url: CONFIG.links.inostconsulting,
-      type: "Formations & Coaching Professionnel",
-      desc: "Plateforme de formations et coaching professionnel. Design moderne et professionnel pour accompagner les entrepreneurs vers le succès.",
+      type: i18n.t('portfolio.projects.inostconsulting.type'),
+      desc: i18n.t('portfolio.projects.inostconsulting.desc'),
       image: "/images/portfolio/inost-consulting.png"
     },
     {
       name: "Asthéoris",
       url: CONFIG.links.astheoris,
-      type: "Astrologie & Coaching de Vie",
-      desc: "Découvrez votre carte de ciel de naissance. Un univers mystique et professionnel pour transformer votre vie grâce à l'astrologie.",
+      type: i18n.t('portfolio.projects.astheoris.type'),
+      desc: i18n.t('portfolio.projects.astheoris.desc'),
       image: "/images/portfolio/astheoris.png"
     },
     {
       name: "ArcadeScript",
       url: CONFIG.links.arcadescript,
-      type: "Générateur de Scripts Vidéo IA",
-      desc: "Unleash the power of the Four Heavenly Kings. Génère des scripts vidéo premium avec la vitesse et précision de Yashiro Nanakase.",
+      type: i18n.t('portfolio.projects.arcadescript.type'),
+      desc: i18n.t('portfolio.projects.arcadescript.desc'),
       image: "/images/portfolio/arcadescript.png"
     },
     {
       name: "CodeXplica",
       url: CONFIG.links.codexplica,
-      type: "Architecture de Code par IA",
-      desc: "The architecture of code, explained by AI. Transforme n'importe quel dépôt GitHub en tutoriel structuré et pédagogique.",
+      type: i18n.t('portfolio.projects.codexplica.type'),
+      desc: i18n.t('portfolio.projects.codexplica.desc'),
       image: "/images/portfolio/codexplica.png"
     },
     {
       name: "Mangasia",
       url: CONFIG.links.mangasia,
-      type: "Studio Manga IA",
-      desc: "Craft your saga with Gemini 3 & Imagen 4. From zero to published manga in minutes. AI-Powered Manga Studio.",
+      type: i18n.t('portfolio.projects.mangasia.type'),
+      desc: i18n.t('portfolio.projects.mangasia.desc'),
       image: "/images/portfolio/mangasia.png"
     }
   ];
@@ -95,10 +96,10 @@ export const Portfolio: React.FC = () => {
             viewport={{ once: true }}
             className="max-w-xl"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter mb-4 sm:mb-6 uppercase">Mes Réalisations</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter mb-4 sm:mb-6 uppercase">{i18n.t('portfolio.title')}</h2>
             <p className="text-white/50 text-lg font-medium italic leading-relaxed">
-              "Sites clairs, mobiles, orientés clients."
-              <br />Regarde ce que j'ai déjà construit pour mes partenaires.
+              {i18n.t('portfolio.description')}
+              <br />{i18n.t('portfolio.description2')}
             </p>
           </motion.div>
           <motion.button
@@ -108,7 +109,7 @@ export const Portfolio: React.FC = () => {
             onClick={() => window.location.hash = '/realisations'}
             className="glass px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest hover:border-[#16C60C] transition-all border-white/10"
           >
-            Voir tous mes projets
+            {i18n.t('portfolio.cta')}
           </motion.button>
         </div>
 

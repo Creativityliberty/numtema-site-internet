@@ -3,17 +3,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, Info } from 'lucide-react';
 import { CONFIG } from '../config';
+import { i18n } from '../lib/i18n';
 
 export const Packs: React.FC = () => {
   return (
     <section id="packs" className="py-20 sm:py-40 lg:py-48 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 sm:mb-24">
-          <div className="text-[#16C60C] text-[10px] font-black uppercase tracking-[0.4em] mb-4">Tarification claire</div>
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter mb-4 sm:mb-6">Choisissez votre <span className="green-gradient">Pack</span></h2>
-          <div className="flex items-center justify-center gap-2 glass px-6 py-2 rounded-full max-w-fit mx-auto border-white/5">
+          <div className="text-[#16C60C] text-[10px] font-black uppercase tracking-[0.4em] mb-4">{i18n.t('packs.badge')}</div>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter mb-4 sm:mb-6">{i18n.t('packs.title')} <span className="green-gradient">{i18n.t('packs.titleHighlight')}</span></h2>
+          <div className="flex items-center justify-center gap-2 glass px-6 py-2 rounded-full max-w-fit mx-auto border-white/10">
             <Info size={14} className="text-[#16C60C]" />
-            <p className="text-[11px] font-bold text-white/70">Un pack ne correspond pas ? Tout se discute.</p>
+            <p className="text-[11px] font-bold text-white/70">{i18n.t('packs.info')}</p>
           </div>
         </div>
 
@@ -26,7 +27,7 @@ export const Packs: React.FC = () => {
             >
               {pack.id === 'semi' && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#16C60C] text-white text-[9px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full">
-                  Le plus populaire
+                  {i18n.t('packs.popular')}
                 </div>
               )}
               <div className="mb-10">
@@ -48,7 +49,7 @@ export const Packs: React.FC = () => {
                 href={`https://wa.me/${CONFIG.contact.whatsapp}?text=Salut Nümtema, je veux le Pack ${pack.name} à ${pack.price}€.`}
                 className={`w-full py-5 rounded-2xl font-black text-xs uppercase tracking-widest text-center transition-all min-h-[48px] ${pack.id === 'semi' ? 'bg-[#16C60C] text-white hover:bg-white hover:text-black' : 'bg-white/5 hover:bg-white hover:text-black'}`}
               >
-                Je veux ce pack
+                {i18n.t('packs.cta')}
               </a>
             </motion.div>
           ))}
@@ -56,7 +57,7 @@ export const Packs: React.FC = () => {
 
         {/* Options section */}
         <div className="mt-12 sm:mt-20 p-6 sm:p-12 rounded-[3rem] sm:rounded-[4rem] glass border-white/5">
-          <h3 className="text-2xl font-black uppercase tracking-tighter mb-8">Options & Extras <span className="text-[#16C60C] text-sm ml-2">(Pour aller plus loin)</span></h3>
+          <h3 className="text-2xl font-black uppercase tracking-tighter mb-8">{i18n.t('packs.optionsTitle')} <span className="text-[#16C60C] text-sm ml-2">{i18n.t('packs.optionsSubtitle')}</span></h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {CONFIG.pricing.options.map((opt, i) => (
               <div key={i} className="flex justify-between items-center py-4 border-b border-white/5">
