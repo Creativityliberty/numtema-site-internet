@@ -64,7 +64,7 @@ export const Services: React.FC = () => {
               viewport={{ once: true }}
               className="text-[#16C60C] text-[10px] font-black uppercase tracking-[0.4em] mb-4"
             >
-              Expertise & Vision
+              {i18n.t('services.badge')}
             </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -103,7 +103,7 @@ export const Services: React.FC = () => {
                 ))}
                 <div className="w-10 h-10 rounded-full border-2 border-black bg-[#16C60C] flex items-center justify-center text-[10px] font-black">+45</div>
               </div>
-              <p className="text-[10px] font-black uppercase tracking-widest text-[#16C60C]">Projets livrés avec succès</p>
+              <p className="text-[10px] font-black uppercase tracking-widest text-[#16C60C]">{i18n.t('services.projectsDelivered')}</p>
             </div>
           </BentoCard>
 
@@ -118,14 +118,14 @@ export const Services: React.FC = () => {
 
           {/* Speed Card */}
           <BentoCard
-            title="CHRONO 72H"
+            title={i18n.t('services.speed.title')}
             icon={Zap}
             className="md:col-span-1 bg-[#16C60C]/5 border-[#16C60C]/20"
             delay={0.3}
           >
             <div className="flex flex-col items-center justify-center flex-grow py-4">
               <span className="text-6xl font-black text-[#16C60C] tracking-tighter">72H</span>
-              <span className="text-[10px] font-black uppercase tracking-widest mt-2 opacity-60 text-white">Livraison Garantie</span>
+              <span className="text-[10px] font-black uppercase tracking-widest mt-2 opacity-60 text-white">{i18n.t('services.speed.badge')}</span>
             </div>
           </BentoCard>
 
@@ -139,8 +139,8 @@ export const Services: React.FC = () => {
           >
             <div className="mt-6 flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-white/5">
               <div className="flex flex-col">
-                <span className="text-xs font-black uppercase text-white/40">Couverture</span>
-                <span className="text-sm font-bold">France • Afrique • Europe</span>
+                <span className="text-xs font-black uppercase text-white/40">{i18n.t('services.coverage')}</span>
+                <span className="text-sm font-bold">{i18n.t('services.coverageText')}</span>
               </div>
               <div className="ml-auto w-2 h-2 bg-[#16C60C] rounded-full animate-ping" />
             </div>
@@ -148,18 +148,18 @@ export const Services: React.FC = () => {
 
           {/* Trust Card */}
           <BentoCard
-            title="QUALITÉ STUDIO"
+            title={i18n.t('services.quality.title')}
             icon={ShieldCheck}
-            description="Zéro compromis. Code propre, design original, support constant."
+            description={i18n.t('services.quality.desc')}
             className="md:col-span-1"
             delay={0.5}
           />
 
           {/* Training Card */}
           <BentoCard
-            title="TRANSMISSION"
+            title={i18n.t('services.training.title')}
             icon={Rocket}
-            description="Devenez autonome sur vos outils digitaux."
+            description={i18n.t('services.training.desc')}
             className="md:col-span-1"
             delay={0.6}
           />

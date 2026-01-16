@@ -53,7 +53,10 @@ export const fr = {
         training: {
             title: 'TRANSMISSION',
             desc: 'Deviens autonome sur tes outils digitaux.'
-        }
+        },
+        projectsDelivered: 'Projets livrés avec succès',
+        coverage: 'Couverture',
+        coverageText: 'France • Afrique • Europe'
     },
     portfolio: {
         title: 'Mes Réalisations',
@@ -146,6 +149,7 @@ export const fr = {
         description: 'Sites web premium, formations digitales et solutions IA pour entrepreneurs ambitieux.',
         navTitle: 'Navigation',
         legalTitle: 'Légal',
+        home: 'Accueil',
         about: 'À Propos',
         portfolio: 'Réalisations',
         formations: 'Formations',
