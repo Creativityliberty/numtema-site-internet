@@ -9,7 +9,7 @@ export const FAQ: React.FC = () => {
   const questions = [
     {
       q: "Je n'ai pas de texte ou photos, c'est bloquant ?",
-      a: "Non. On vous donne une checklist et on vous aide à structurer vos contenus. On peut même s'occuper du copywriting pour vous."
+      a: "Non. Je te donne une checklist et je t'aide à structurer tes contenus. Je peux même m'occuper du copywriting pour toi."
     },
     {
       q: "En combien de temps le site est prêt ?",
@@ -21,11 +21,11 @@ export const FAQ: React.FC = () => {
     },
     {
       q: "Le pack ne correspond pas exactement à mon besoin ?",
-      a: "C'est là que l'ADN de Nümtema intervient : Tout se discute. On adapte les pages et les fonctionnalités pour rendre réelle votre vision."
+      a: "C'est là que mon ADN intervient : Tout se discute. J'adapte les pages et les fonctionnalités pour rendre réelle ta vision."
     },
     {
       q: "Vous bossez à distance ?",
-      a: "Oui, nous travaillons avec des clients en France et en Afrique francophone. Tout se fait via WhatsApp et Visioconférence."
+      a: "Oui, je travaille avec des clients en France et en Afrique francophone. Tout se fait via WhatsApp et Visio."
     }
   ];
 

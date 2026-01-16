@@ -72,7 +72,7 @@ export const Services: React.FC = () => {
               viewport={{ once: true }}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter uppercase leading-[0.9]"
             >
-              NOS SOLUTIONS <br /><span className="green-gradient">D'ÉLITE</span>
+              MES SOLUTIONS <br /><span className="green-gradient">MOBILE-FIRST</span>
             </motion.h2>
           </div>
           <motion.p
@@ -81,7 +81,7 @@ export const Services: React.FC = () => {
             viewport={{ once: true }}
             className="text-white/40 font-medium max-w-sm italic text-right hidden md:block"
           >
-            "Nous ne créons pas des outils, nous bâtissons des empires digitaux."
+            "Je ne crée pas des outils, je bâtis ton empire digital."
           </motion.p>
         </div>
 
@@ -90,7 +90,7 @@ export const Services: React.FC = () => {
           <BentoCard
             title="SITES WEB HAUTE-COUTURE"
             icon={MonitorSmartphone}
-            description="L'équilibre parfait entre esthétique de luxe et conversion agressive. Pensé pour les entrepreneurs exigeants."
+            description="L'équilibre parfait entre design mobile et conversion. Pensé pour ton téléphone d'abord."
             className="md:col-span-2 md:row-span-2 min-h-[400px]"
             delay={0.1}
           >
@@ -111,7 +111,7 @@ export const Services: React.FC = () => {
           <BentoCard
             title="IA BUSINESS LAB"
             icon={BrainCircuit}
-            description="Automatisez vos ventes et votre support client avec nos cerveaux digitaux sur-mesure."
+            description="J'automatise tes ventes et ton support client avec l'IA sur-mesure."
             className="md:col-span-1"
             delay={0.2}
           />
@@ -133,7 +133,7 @@ export const Services: React.FC = () => {
           <BentoCard
             title="RAYONNEMENT GLOBAL"
             icon={Globe2}
-            description="De Paris à Abidjan, nous connectons les entrepreneurs au reste du monde."
+            description="De Paris à Abidjan, je connecte les entrepreneurs au monde entier."
             className="md:col-span-2"
             delay={0.4}
           >

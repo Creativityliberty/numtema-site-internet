@@ -110,7 +110,7 @@ export const Hero: React.FC = () => {
           className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border border-[#16C60C]/30 glass text-[8px] sm:text-[10px] font-black uppercase tracking-[0.3em] sm:tracking-[0.4em] mb-8 sm:mb-12 text-[#16C60C] shadow-lg shadow-[#16C60C]/10"
         >
           <Sparkles size={14} className="animate-pulse" />
-          LIVRAISON 3 JOURS MAX • PREMIUM • ACCESSIBLE
+          LIVRAISON 3 JOURS • TON SITE MOBILE-FIRST • ACCESSIBLE
         </motion.div>
 
         <motion.h1
@@ -160,8 +160,8 @@ export const Hero: React.FC = () => {
           variants={item}
           className="text-base sm:text-lg md:text-2xl font-medium text-white/60 mb-12 sm:mb-16 max-w-3xl mx-auto leading-relaxed px-4"
         >
-          Nümtema Agency crée des sites internet qui inspirent confiance et génèrent du profit.
-          <span className="block mt-4 text-white italic font-serif">"L'excellence n'attend pas : votre business mérite d'être en ligne dès maintenant."</span>
+          Je crée ton site qui inspire confiance et génère des clients.
+          <span className="block mt-4 text-white italic font-serif">"Ton business mérite d'être en ligne dès maintenant."</span>
         </motion.p>
 
         <motion.div
@@ -172,13 +172,13 @@ export const Hero: React.FC = () => {
             href={`https://wa.me/${CONFIG.contact.whatsapp}`}
             className="w-full sm:w-auto bg-[#16C60C] text-white px-10 sm:px-14 py-5 sm:py-7 rounded-full font-black text-base sm:text-lg flex items-center justify-center gap-3 sm:gap-4 hover:scale-105 active:scale-95 transition-all shadow-2xl shadow-[#16C60C]/40 min-h-[56px]"
           >
-            WhatsApp maintenant <ArrowRight size={22} />
+            Parle-moi sur WhatsApp <ArrowRight size={22} />
           </a>
           <button
             onClick={() => document.getElementById('packs')?.scrollIntoView({ behavior: 'smooth' })}
             className="w-full sm:w-auto glass px-10 sm:px-14 py-5 sm:py-7 rounded-full font-black text-base sm:text-lg hover:border-[#16C60C]/50 transition-all border-white/5 active:scale-95 min-h-[56px]"
           >
-            Voir les packs
+            Voir mes packs
           </button>
         </motion.div>
 

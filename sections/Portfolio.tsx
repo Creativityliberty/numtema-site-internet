@@ -60,10 +60,10 @@ export const Portfolio: React.FC = () => {
             viewport={{ once: true }}
             className="max-w-xl"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter mb-4 sm:mb-6 uppercase">Réalisations Réelles</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter mb-4 sm:mb-6 uppercase">Mes Réalisations</h2>
             <p className="text-white/50 text-lg font-medium italic leading-relaxed">
-              "Des sites clairs, modernes, et orientés clients."
-              <br />Regardez ce que nous avons déjà construit pour nos partenaires.
+              "Sites clairs, mobiles, orientés clients."
+              <br />Regarde ce que j'ai déjà construit pour mes partenaires.
             </p>
           </motion.div>
           <motion.button
@@ -73,7 +73,7 @@ export const Portfolio: React.FC = () => {
             onClick={() => window.location.hash = '/realisations'}
             className="glass px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest hover:border-[#16C60C] transition-all border-white/10"
           >
-            Voir tous les projets
+            Voir tous mes projets
           </motion.button>
         </div>
 
