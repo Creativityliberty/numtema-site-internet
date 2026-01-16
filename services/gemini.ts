@@ -32,6 +32,11 @@ export const chatWithMikmik = async (userMessage: string, history: { role: strin
       - Inost Consulting: https://inostconsulting.com/ (Formations & Coaching) ![Inost Consulting](/images/portfolio/inost-consulting.png)
       - Asthéoris: https://astheoris.fr/ (Astrologie & Coaching) ![Asthéoris](/images/portfolio/astheoris.png)
       
+      APPLICATIONS NÜMTEMA FOUNDRY (Apps IA créées par moi):
+      - ArcadeScript: https://arcadescript-9sgw.vercel.app/ (Générateur Scripts Vidéo IA) ![ArcadeScript](/images/portfolio/arcadescript.png)
+      - CodeXplica: https://codxplica.vercel.app/ (Architecture Code par IA) ![CodeXplica](/images/portfolio/codexplica.png)
+      - Mangasia: https://mangasia.vercel.app/ (Studio Manga IA) ![Mangasia](/images/portfolio/mangasia.png)
+      
       CONTACT:
       - WhatsApp: ${CONFIG.contact.phone}
       - Email: ${CONFIG.contact.email}
