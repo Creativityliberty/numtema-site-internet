@@ -165,7 +165,7 @@ export const en = {
             },
             {
                 q: 'Can I pay in installments?',
-                a: 'Yes, it\'s possible for Semi-complete (800€) and Complete (1500€) packs.'
+                a: 'Yes, it\'s possible for Semi-complete (3500€) and Complete (5000€) packs.'
             },
             {
                 q: 'The pack doesn\'t exactly match my needs?',

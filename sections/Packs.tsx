@@ -65,10 +65,6 @@ export const Packs: React.FC = () => {
                 <span className="text-sm font-black text-[#16C60C]">+{opt.price}€</span>
               </div>
             ))}
-            <div className="flex justify-between items-center py-4 border-b border-[#16C60C]/30 italic">
-              <span className="text-sm font-bold text-white/80 italic">Chatbot IA Business</span>
-              <span className="text-sm font-black text-[#16C60C]">350€</span>
-            </div>
           </div>
         </div>
       </div>

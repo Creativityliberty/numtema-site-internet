@@ -165,7 +165,7 @@ export const fr = {
             },
             {
                 q: 'Est-ce que je peux payer en plusieurs fois ?',
-                a: 'Oui, c\'est possible sur les packs Semi-complet (800€) et Complet (1500€).'
+                a: 'Oui, c\'est possible sur les packs Semi-complet (3500€) et Complet (5000€).'
             },
             {
                 q: 'Le pack ne correspond pas exactement à mon besoin ?',

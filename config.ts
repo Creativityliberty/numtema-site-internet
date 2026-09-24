@@ -35,38 +35,38 @@ export const CONFIG = {
       {
         id: "starter",
         name: "Starter",
-        price: 350,
+        price: 1500,
         desc: "L'essentiel pour exister",
         features: ["Site One-Page complet", "WhatsApp intégré", "Formulaire contact", "Responsive mobile", "Livraison 48h-72h MAX"]
       },
       {
         id: "pro",
         name: "Pro",
-        price: 500,
+        price: 2500,
         desc: "Crédibilité maximale",
         features: ["Starter +", "SEO basique (indexation)", "1 page bonus", "Retouches express", "Livraison 3 JOURS MAX"]
       },
       {
         id: "semi",
         name: "Semi-Complet",
-        price: 800,
+        price: 3500,
         desc: "Machine à conversion",
         features: ["Site 5 pages", "Copywriting guidé", "Portfolio / Réalisations", "FAQ + Avis clients", "Livraison 3-5 jours"]
       },
       {
         id: "complet",
         name: "Complet",
-        price: 1500,
+        price: 5000,
         desc: "Full système digital",
         features: ["Design Premium", "IA / Automatisation simple", "Pages SEO ou Blog", "Calendrier RDV", "Support VIP 30 jours"]
       }
     ],
     options: [
-      { name: "Logo simple", price: 60 },
+      { name: "Logo simple", price: 100 },
       { name: "Bannière réseaux", price: 80 },
-      { name: "Chatbot IA Simple", price: 150 },
-      { name: "Chatbot IA Business", price: 350 },
-      { name: "Multilingue", price: 200 }
+      { name: "Chatbot IA Simple", price: 250 },
+      { name: "Chatbot IA Business", price: 900 },
+      { name: "Multilingue", price: 300 }
     ]
   },
   formations: [
