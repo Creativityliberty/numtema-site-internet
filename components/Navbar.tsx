@@ -11,7 +11,6 @@ export const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: i18n.t('nav.home'), path: '/' },
-    { name: i18n.t('nav.packs'), path: '/#packs' },
     { name: i18n.t('nav.portfolio'), path: '/realisations' },
     { name: i18n.t('nav.services'), path: '/#services' },
     { name: i18n.t('nav.formations'), path: '/formations' },
