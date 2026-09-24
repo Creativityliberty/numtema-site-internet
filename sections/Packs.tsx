@@ -10,10 +10,10 @@ export const Packs: React.FC = () => {
     <section id="packs" className="py-20 sm:py-40 lg:py-48 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 sm:mb-24">
-          <div className="text-[#16C60C] text-[10px] font-black uppercase tracking-[0.4em] mb-4">{i18n.t('packs.badge')}</div>
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter mb-4 sm:mb-6">{i18n.t('packs.title')} <span className="green-gradient">{i18n.t('packs.titleHighlight')}</span></h2>
+          <div className="text-[#D4AF37] text-[10px] font-black uppercase tracking-[0.4em] mb-4">{i18n.t('packs.badge')}</div>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter mb-4 sm:mb-6">{i18n.t('packs.title')} <span className="gold-gradient">{i18n.t('packs.titleHighlight')}</span></h2>
           <div className="flex items-center justify-center gap-2 glass px-6 py-2 rounded-full max-w-fit mx-auto border-white/10">
-            <Info size={14} className="text-[#16C60C]" />
+            <Info size={14} className="text-[#D4AF37]" />
             <p className="text-[11px] font-bold text-white/70">{i18n.t('packs.info')}</p>
           </div>
         </div>
@@ -23,10 +23,10 @@ export const Packs: React.FC = () => {
             <motion.div
               key={pack.id}
               whileHover={{ scale: 1.02 }}
-              className={`flex flex-col p-8 lg:p-10 rounded-[3rem] lg:rounded-[4rem] glass border relative transition-all hover:scale-105 hover:shadow-2xl hover:shadow-[#16C60C]/10 ${pack.id === 'semi' ? 'border-[#16C60C]/40 ring-1 ring-[#16C60C]/20 shadow-2xl shadow-[#16C60C]/10' : 'border-white/5'}`}
+              className={`flex flex-col p-8 lg:p-10 rounded-[3rem] lg:rounded-[4rem] glass border relative transition-all hover:scale-105 hover:shadow-2xl hover:shadow-[#D4AF37]/10 ${pack.id === 'semi' ? 'border-[#D4AF37]/40 ring-1 ring-[#D4AF37]/20 shadow-2xl shadow-[#D4AF37]/10' : 'border-white/5'}`}
             >
               {pack.id === 'semi' && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#16C60C] text-white text-[9px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#D4AF37] text-white text-[9px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full">
                   {i18n.t('packs.popular')}
                 </div>
               )}
@@ -40,14 +40,14 @@ export const Packs: React.FC = () => {
               <div className="flex-grow space-y-4 mb-10">
                 {pack.features.map((f, i) => (
                   <div key={i} className="flex items-start gap-3 text-xs font-bold text-white/70 leading-snug">
-                    <Check size={14} className="text-[#16C60C] mt-0.5 shrink-0" />
+                    <Check size={14} className="text-[#D4AF37] mt-0.5 shrink-0" />
                     {f}
                   </div>
                 ))}
               </div>
               <a
                 href={`https://wa.me/${CONFIG.contact.whatsapp}?text=Salut Nümtema, je veux le Pack ${pack.name} à ${pack.price}€.`}
-                className={`w-full py-5 rounded-2xl font-black text-xs uppercase tracking-widest text-center transition-all min-h-[48px] ${pack.id === 'semi' ? 'bg-[#16C60C] text-white hover:bg-white hover:text-black' : 'bg-white/5 hover:bg-white hover:text-black'}`}
+                className={`w-full py-5 rounded-2xl font-black text-xs uppercase tracking-widest text-center transition-all min-h-[48px] ${pack.id === 'semi' ? 'bg-[#D4AF37] text-white hover:bg-white hover:text-black' : 'bg-white/5 hover:bg-white hover:text-black'}`}
               >
                 {i18n.t('packs.cta')}
               </a>
@@ -57,12 +57,12 @@ export const Packs: React.FC = () => {
 
         {/* Options section */}
         <div className="mt-12 sm:mt-20 p-6 sm:p-12 rounded-[3rem] sm:rounded-[4rem] glass border-white/5">
-          <h3 className="text-2xl font-black uppercase tracking-tighter mb-8">{i18n.t('packs.optionsTitle')} <span className="text-[#16C60C] text-sm ml-2">{i18n.t('packs.optionsSubtitle')}</span></h3>
+          <h3 className="text-2xl font-black uppercase tracking-tighter mb-8">{i18n.t('packs.optionsTitle')} <span className="text-[#D4AF37] text-sm ml-2">{i18n.t('packs.optionsSubtitle')}</span></h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {CONFIG.pricing.options.map((opt, i) => (
               <div key={i} className="flex justify-between items-center py-4 border-b border-white/5">
                 <span className="text-sm font-bold text-white/60">{opt.name}</span>
-                <span className="text-sm font-black text-[#16C60C]">+{opt.price}€</span>
+                <span className="text-sm font-black text-[#D4AF37]">+{opt.price}€</span>
               </div>
             ))}
           </div>

@@ -14,7 +14,7 @@ export const SupportButton: React.FC<SupportButtonProps> = ({ onOpenChat }) => {
        </div>
        <button
         onClick={onOpenChat}
-        className="w-16 h-16 bg-black rounded-full flex items-center justify-center overflow-hidden shadow-2xl shadow-[#16C60C]/40 hover:scale-110 active:scale-95 transition-all border-2 border-[#16C60C]"
+        className="w-16 h-16 bg-black rounded-full flex items-center justify-center overflow-hidden shadow-2xl shadow-[#D4AF37]/40 hover:scale-110 active:scale-95 transition-all border-2 border-[#D4AF37]"
       >
         <img 
           src={CONFIG.brand.logoUrl} 

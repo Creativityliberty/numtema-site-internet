@@ -107,7 +107,7 @@ export const Portfolio: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             onClick={() => window.location.hash = '/realisations'}
-            className="glass px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest hover:border-[#16C60C] transition-all border-white/10"
+            className="glass px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest hover:border-[#D4AF37] transition-all border-white/10"
           >
             {i18n.t('portfolio.cta')}
           </motion.button>
@@ -126,19 +126,19 @@ export const Portfolio: React.FC = () => {
               transition={{ delay: i * 0.1 }}
               className="group flex flex-col gap-6 sm:gap-8"
             >
-              <div className="aspect-video bg-white/5 rounded-[3rem] lg:rounded-[4rem] overflow-hidden border border-white/5 group-hover:border-[#16C60C]/40 group-hover:shadow-2xl group-hover:shadow-[#16C60C]/20 transition-all relative shadow-2xl">
+              <div className="aspect-video bg-white/5 rounded-[3rem] lg:rounded-[4rem] overflow-hidden border border-white/5 group-hover:border-[#D4AF37]/40 group-hover:shadow-2xl group-hover:shadow-[#D4AF37]/20 transition-all relative shadow-2xl">
                 <img
                   src={work.image}
                   alt={work.name}
                   className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
                 />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-all duration-500"></div>
-                <div className="absolute bottom-8 right-8 p-4 bg-[#16C60C] text-white rounded-2xl translate-y-20 group-hover:translate-y-0 transition-transform duration-500 shadow-xl shadow-[#16C60C]/30">
+                <div className="absolute bottom-8 right-8 p-4 bg-[#D4AF37] text-white rounded-2xl translate-y-20 group-hover:translate-y-0 transition-transform duration-500 shadow-xl shadow-[#D4AF37]/30">
                   <ExternalLink size={24} />
                 </div>
               </div>
               <div>
-                <span className="text-[#16C60C] text-xs font-black uppercase tracking-[0.3em] mb-2 sm:mb-3 block">{work.type}</span>
+                <span className="text-[#D4AF37] text-xs font-black uppercase tracking-[0.3em] mb-2 sm:mb-3 block">{work.type}</span>
                 <h3 className="text-2xl sm:text-3xl font-black tracking-tighter mb-3 sm:mb-4">{work.name}</h3>
                 <p className="text-white/40 text-base font-medium leading-relaxed max-w-lg">{work.desc}</p>
               </div>

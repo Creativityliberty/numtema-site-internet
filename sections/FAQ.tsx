@@ -22,7 +22,7 @@ export const FAQ: React.FC = () => {
                 className="w-full flex items-center justify-between p-6 sm:p-8 text-left hover:bg-white/5 transition-all min-h-[56px]"
               >
                 <span className="text-base sm:text-lg font-black tracking-tight pr-4">{q.q}</span>
-                {openIndex === i ? <Minus size={20} className="text-[#16C60C]" /> : <Plus size={20} />}
+                {openIndex === i ? <Minus size={20} className="text-[#D4AF37]" /> : <Plus size={20} />}
               </button>
               <AnimatePresence>
                 {openIndex === i && (

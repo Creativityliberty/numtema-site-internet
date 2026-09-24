@@ -88,14 +88,14 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0, x: 100, rotateZ: -25 }}
             animate={{ opacity: 0.8, x: 120, rotateZ: -45, y: -150 }}
             transition={{ duration: 1.5, delay: 0.2, ease: "easeOut" }}
-            className="absolute w-[500px] md:w-[700px] aspect-[16/10] rounded-[3rem] overflow-hidden border border-[#16C60C]/30 shadow-2xl z-10"
+            className="absolute w-[500px] md:w-[700px] aspect-[16/10] rounded-[3rem] overflow-hidden border border-[#D4AF37]/30 shadow-2xl z-10"
           >
             <img
               src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&auto=format&fit=crop"
               alt="Workspace"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#16C60C]/20 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#D4AF37]/20 to-transparent"></div>
           </motion.div>
         </div>
       </div>
@@ -108,7 +108,7 @@ export const Hero: React.FC = () => {
       >
         <motion.div
           variants={item}
-          className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border border-[#16C60C]/30 glass text-[8px] sm:text-[10px] font-black uppercase tracking-[0.3em] sm:tracking-[0.4em] mb-8 sm:mb-12 text-[#16C60C] shadow-lg shadow-[#16C60C]/10"
+          className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border border-[#D4AF37]/30 glass text-[8px] sm:text-[10px] font-black uppercase tracking-[0.3em] sm:tracking-[0.4em] mb-8 sm:mb-12 text-[#D4AF37] shadow-lg shadow-[#D4AF37]/10"
         >
           <Sparkles size={14} className="animate-pulse" />
           {i18n.t('hero.badge')}
@@ -123,7 +123,7 @@ export const Hero: React.FC = () => {
           ))}
           <motion.span
             variants={wordItem}
-            className="green-gradient italic w-full block overflow-hidden pb-4 uppercase"
+            className="gold-gradient italic w-full block overflow-hidden pb-4 uppercase"
           >
             {i18n.t('hero.title3')}
           </motion.span>
@@ -171,13 +171,13 @@ export const Hero: React.FC = () => {
         >
           <a
             href={`https://wa.me/${CONFIG.contact.whatsapp}`}
-            className="w-full sm:w-auto bg-[#16C60C] text-white px-10 sm:px-14 py-5 sm:py-7 rounded-full font-black text-base sm:text-lg flex items-center justify-center gap-3 sm:gap-4 hover:scale-105 active:scale-95 transition-all shadow-2xl shadow-[#16C60C]/40 min-h-[56px]"
+            className="w-full sm:w-auto bg-[#D4AF37] text-white px-10 sm:px-14 py-5 sm:py-7 rounded-full font-black text-base sm:text-lg flex items-center justify-center gap-3 sm:gap-4 hover:scale-105 active:scale-95 transition-all shadow-2xl shadow-[#D4AF37]/40 min-h-[56px]"
           >
             {i18n.t('hero.ctaWhatsapp')} <ArrowRight size={22} />
           </a>
           <button
             onClick={() => document.getElementById('packs')?.scrollIntoView({ behavior: 'smooth' })}
-            className="w-full sm:w-auto glass px-10 sm:px-14 py-5 sm:py-7 rounded-full font-black text-base sm:text-lg hover:border-[#16C60C]/50 transition-all border-white/5 active:scale-95 min-h-[56px]"
+            className="w-full sm:w-auto glass px-10 sm:px-14 py-5 sm:py-7 rounded-full font-black text-base sm:text-lg hover:border-[#D4AF37]/50 transition-all border-white/5 active:scale-95 min-h-[56px]"
           >
             {i18n.t('hero.ctaPacks')}
           </button>
@@ -187,9 +187,9 @@ export const Hero: React.FC = () => {
           variants={item}
           className="mt-24 lg:mt-32 flex flex-wrap items-center justify-center gap-8 md:gap-20 lg:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all duration-500"
         >
-          <div className="flex items-center gap-3 text-sm font-black tracking-widest transition-transform hover:scale-110 cursor-default"><Zap size={18} className="text-[#16C60C]" /> {i18n.t('hero.feature1')}</div>
-          <div className="flex items-center gap-3 text-sm font-black tracking-widest transition-transform hover:scale-110 cursor-default"><Globe size={18} className="text-[#16C60C]" /> {i18n.t('hero.feature2')}</div>
-          <div className="flex items-center gap-3 text-sm font-black tracking-widest transition-transform hover:scale-110 cursor-default"><ShieldCheck size={18} className="text-[#16C60C]" /> {i18n.t('hero.feature3')}</div>
+          <div className="flex items-center gap-3 text-sm font-black tracking-widest transition-transform hover:scale-110 cursor-default"><Zap size={18} className="text-[#D4AF37]" /> {i18n.t('hero.feature1')}</div>
+          <div className="flex items-center gap-3 text-sm font-black tracking-widest transition-transform hover:scale-110 cursor-default"><Globe size={18} className="text-[#D4AF37]" /> {i18n.t('hero.feature2')}</div>
+          <div className="flex items-center gap-3 text-sm font-black tracking-widest transition-transform hover:scale-110 cursor-default"><ShieldCheck size={18} className="text-[#D4AF37]" /> {i18n.t('hero.feature3')}</div>
         </motion.div>
       </motion.div>
     </section>

@@ -13,9 +13,9 @@ export const AboutPage: React.FC = () => {
              initial={{ opacity: 0, x: -30 }}
              animate={{ opacity: 1, x: 0 }}
            >
-              <div className="text-[#16C60C] text-[10px] font-black uppercase tracking-[0.4em] mb-6">L'histoire de Nümtema</div>
+              <div className="text-[#D4AF37] text-[10px] font-black uppercase tracking-[0.4em] mb-6">L'histoire de Nümtema</div>
               <h1 className="text-5xl md:text-8xl font-black tracking-tighter mb-10 uppercase leading-[0.85]">
-                L'Agence qui <br /><span className="text-[#16C60C]">casse les codes</span>
+                L'Agence qui <br /><span className="text-[#D4AF37]">casse les codes</span>
               </h1>
               <p className="text-xl text-white/50 font-medium leading-relaxed mb-10 italic">
                 "Nümtema n'est pas une usine à sites. C'est un atelier de haute couture digitale où chaque pixel est pensé pour la conversion."
@@ -34,10 +34,10 @@ export const AboutPage: React.FC = () => {
                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                  <div className="absolute bottom-12 left-12">
                     <p className="text-2xl font-black tracking-tight">{CONFIG.brand.owner}</p>
-                    <p className="text-[#16C60C] text-xs font-black uppercase tracking-widest">Fondateur & Visionnaire</p>
+                    <p className="text-[#D4AF37] text-xs font-black uppercase tracking-widest">Fondateur & Visionnaire</p>
                  </div>
               </div>
-              <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#16C60C] rounded-full flex items-center justify-center p-8 text-center text-black font-black text-xs uppercase tracking-tighter animate-pulse shadow-2xl shadow-[#16C60C]/40">
+              <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#D4AF37] rounded-full flex items-center justify-center p-8 text-center text-black font-black text-xs uppercase tracking-tighter animate-pulse shadow-2xl shadow-[#D4AF37]/40">
                  Tout se discute !
               </div>
            </div>
@@ -57,7 +57,7 @@ export const AboutPage: React.FC = () => {
                transition={{ delay: i * 0.1 }}
                className="glass p-12 rounded-[3.5rem] border-white/5"
              >
-                <div className="w-14 h-14 bg-[#16C60C]/10 rounded-2xl flex items-center justify-center text-[#16C60C] mb-8">
+                <div className="w-14 h-14 bg-[#D4AF37]/10 rounded-2xl flex items-center justify-center text-[#D4AF37] mb-8">
                    <v.icon size={28} />
                 </div>
                 <h4 className="text-2xl font-black uppercase mb-4">{v.title}</h4>
@@ -66,14 +66,14 @@ export const AboutPage: React.FC = () => {
            ))}
         </div>
 
-        <div className="p-16 rounded-[4rem] glass border-[#16C60C]/20 bg-[#16C60C]/5 text-center">
+        <div className="p-16 rounded-[4rem] glass border-[#D4AF37]/20 bg-[#D4AF37]/5 text-center">
            <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tight mb-8">Pourquoi "Nümtema" ?</h3>
            <p className="text-xl text-white/60 mb-12 max-w-3xl mx-auto leading-relaxed">
              C'est plus qu'un nom, c'est une promesse de visibilité et de croissance. Nous croyons que chaque business, peu importe sa taille, mérite une armure digitale premium.
            </p>
            <a 
               href={`https://wa.me/${CONFIG.contact.whatsapp}`}
-              className="inline-flex items-center gap-4 bg-[#16C60C] text-white px-12 py-6 rounded-2xl font-black text-lg uppercase tracking-widest hover:scale-105 transition-all shadow-xl shadow-[#16C60C]/20"
+              className="inline-flex items-center gap-4 bg-[#D4AF37] text-white px-12 py-6 rounded-2xl font-black text-lg uppercase tracking-widest hover:scale-105 transition-all shadow-xl shadow-[#D4AF37]/20"
            >
               Discuter avec Lionel <MessageCircle size={24} />
            </a>

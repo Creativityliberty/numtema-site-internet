@@ -23,7 +23,7 @@ export const LanguageSwitcher: React.FC = () => {
         <div className="relative">
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="flex items-center gap-2 px-3 py-2 rounded-full glass border border-white/10 hover:border-[#16C60C]/30 transition-all text-sm font-bold"
+                className="flex items-center gap-2 px-3 py-2 rounded-full glass border border-white/10 hover:border-[#D4AF37]/30 transition-all text-sm font-bold"
             >
                 <Globe size={16} />
                 <span className="hidden sm:inline">{currentLanguage?.flag} {currentLanguage?.label}</span>
@@ -43,7 +43,7 @@ export const LanguageSwitcher: React.FC = () => {
                             <button
                                 key={lang.code}
                                 onClick={() => handleLanguageChange(lang.code)}
-                                className={`w-full px-4 py-3 text-left hover:bg-white/5 transition-all flex items-center gap-3 text-sm font-bold ${currentLang === lang.code ? 'bg-[#16C60C]/10 text-[#16C60C]' : ''
+                                className={`w-full px-4 py-3 text-left hover:bg-white/5 transition-all flex items-center gap-3 text-sm font-bold ${currentLang === lang.code ? 'bg-[#D4AF37]/10 text-[#D4AF37]' : ''
                                     }`}
                             >
                                 <span className="text-lg">{lang.flag}</span>

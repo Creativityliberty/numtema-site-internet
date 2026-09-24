@@ -39,12 +39,12 @@ export const Showcase3D: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#16C60C]/30 glass text-[9px] font-black uppercase tracking-[0.3em] mb-6 text-[#16C60C]"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#D4AF37]/30 glass text-[9px] font-black uppercase tracking-[0.3em] mb-6 text-[#D4AF37]"
           >
             {i18n.t('showcase.badge')}
           </motion.div>
           <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6 uppercase">
-            {i18n.t('showcase.title')} <span className="green-gradient">{i18n.t('showcase.titleHighlight')}</span>
+            {i18n.t('showcase.title')} <span className="gold-gradient">{i18n.t('showcase.titleHighlight')}</span>
           </h2>
           <p className="text-white/40 text-lg font-medium max-w-2xl italic px-4">
             {i18n.t('showcase.description')}

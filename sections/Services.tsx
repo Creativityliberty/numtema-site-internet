@@ -26,18 +26,18 @@ const BentoCard = ({
     transition={{ delay, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
     whileHover={{ y: -5 }}
     className={cn(
-      "glass group relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] lg:rounded-[3rem] border-white/5 p-6 sm:p-8 lg:p-10 hover:border-[#16C60C]/30 hover:shadow-2xl hover:shadow-[#16C60C]/10 transition-all duration-500",
+      "glass group relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] lg:rounded-[3rem] border-white/5 p-6 sm:p-8 lg:p-10 hover:border-[#D4AF37]/30 hover:shadow-2xl hover:shadow-[#D4AF37]/10 transition-all duration-500",
       className
     )}
   >
-    <div className="absolute inset-0 bg-gradient-to-br from-[#16C60C]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+    <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
     <div className="relative z-10 flex flex-col h-full">
       <div className="flex items-center justify-between mb-6">
-        <div className="p-3 rounded-2xl bg-white/5 text-[#16C60C] group-hover:scale-110 group-hover:bg-[#16C60C]/10 transition-all duration-500">
+        <div className="p-3 rounded-2xl bg-white/5 text-[#D4AF37] group-hover:scale-110 group-hover:bg-[#D4AF37]/10 transition-all duration-500">
           <Icon size={24} />
         </div>
         <div className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all">
-          <Rocket size={12} className="text-[#16C60C]" />
+          <Rocket size={12} className="text-[#D4AF37]" />
         </div>
       </div>
       <div>
@@ -53,7 +53,7 @@ export const Services: React.FC = () => {
   return (
     <section id="services" className="py-20 sm:py-40 lg:py-48 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Background elements */}
-      <div className="absolute top-1/4 -right-20 w-96 h-96 bg-[#16C60C]/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/4 -right-20 w-96 h-96 bg-[#D4AF37]/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-end justify-between mb-12 sm:mb-20 gap-6 sm:gap-8">
@@ -62,7 +62,7 @@ export const Services: React.FC = () => {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-[#16C60C] text-[10px] font-black uppercase tracking-[0.4em] mb-4"
+              className="text-[#D4AF37] text-[10px] font-black uppercase tracking-[0.4em] mb-4"
             >
               {i18n.t('services.badge')}
             </motion.div>
@@ -72,7 +72,7 @@ export const Services: React.FC = () => {
               viewport={{ once: true }}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter uppercase leading-[0.9]"
             >
-              {i18n.t('services.title')} <br /><span className="green-gradient">{i18n.t('services.titleHighlight')}</span>
+              {i18n.t('services.title')} <br /><span className="gold-gradient">{i18n.t('services.titleHighlight')}</span>
             </motion.h2>
           </div>
           <motion.p
@@ -101,9 +101,9 @@ export const Services: React.FC = () => {
                     <img src={`https://i.pravatar.cc/100?img=${i + 10}`} alt="user" className="w-full h-full object-cover" />
                   </div>
                 ))}
-                <div className="w-10 h-10 rounded-full border-2 border-black bg-[#16C60C] flex items-center justify-center text-[10px] font-black">+45</div>
+                <div className="w-10 h-10 rounded-full border-2 border-black bg-[#D4AF37] flex items-center justify-center text-[10px] font-black">+45</div>
               </div>
-              <p className="text-[10px] font-black uppercase tracking-widest text-[#16C60C]">{i18n.t('services.projectsDelivered')}</p>
+              <p className="text-[10px] font-black uppercase tracking-widest text-[#D4AF37]">{i18n.t('services.projectsDelivered')}</p>
             </div>
           </BentoCard>
 
@@ -120,11 +120,11 @@ export const Services: React.FC = () => {
           <BentoCard
             title={i18n.t('services.speed.title')}
             icon={Zap}
-            className="md:col-span-1 bg-[#16C60C]/5 border-[#16C60C]/20"
+            className="md:col-span-1 bg-[#D4AF37]/5 border-[#D4AF37]/20"
             delay={0.3}
           >
             <div className="flex flex-col items-center justify-center flex-grow py-4">
-              <span className="text-6xl font-black text-[#16C60C] tracking-tighter">72H</span>
+              <span className="text-6xl font-black text-[#D4AF37] tracking-tighter">72H</span>
               <span className="text-[10px] font-black uppercase tracking-widest mt-2 opacity-60 text-white">{i18n.t('services.speed.badge')}</span>
             </div>
           </BentoCard>
@@ -142,7 +142,7 @@ export const Services: React.FC = () => {
                 <span className="text-xs font-black uppercase text-white/40">{i18n.t('services.coverage')}</span>
                 <span className="text-sm font-bold">{i18n.t('services.coverageText')}</span>
               </div>
-              <div className="ml-auto w-2 h-2 bg-[#16C60C] rounded-full animate-ping" />
+              <div className="ml-auto w-2 h-2 bg-[#D4AF37] rounded-full animate-ping" />
             </div>
           </BentoCard>
 

@@ -15,7 +15,6 @@ export const Navbar: React.FC = () => {
     { name: i18n.t('nav.portfolio'), path: '/realisations' },
     { name: i18n.t('nav.services'), path: '/#services' },
     { name: i18n.t('nav.formations'), path: '/formations' },
-    { name: i18n.t('nav.applications'), path: 'https://v0-creative-portfolio-virid.vercel.app/', external: true },
     { name: i18n.t('nav.contact'), path: '/contact' },
   ];
 
@@ -27,7 +26,7 @@ export const Navbar: React.FC = () => {
             <img src={CONFIG.brand.logoUrl} alt="Logo" className="w-full h-full object-cover" />
           </div>
           <span className="text-base sm:text-xl font-black tracking-tighter uppercase hidden md:block">
-            {CONFIG.brand.name}<span className="text-[#16C60C]">{CONFIG.brand.suffix}</span>
+            {CONFIG.brand.name}<span className="text-[#D4AF37]">{CONFIG.brand.suffix}</span>
           </span>
         </Link>
 
@@ -40,7 +39,7 @@ export const Navbar: React.FC = () => {
                 href={link.path}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[10px] font-black uppercase tracking-[0.25em] opacity-60 hover:opacity-100 hover:text-[#16C60C] transition-all"
+                className="text-[10px] font-black uppercase tracking-[0.25em] opacity-60 hover:opacity-100 hover:text-[#D4AF37] transition-all"
               >
                 {link.name}
               </a>
@@ -48,7 +47,7 @@ export const Navbar: React.FC = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className="text-[10px] font-black uppercase tracking-[0.25em] opacity-60 hover:opacity-100 hover:text-[#16C60C] transition-all"
+                className="text-[10px] font-black uppercase tracking-[0.25em] opacity-60 hover:opacity-100 hover:text-[#D4AF37] transition-all"
               >
                 {link.name}
               </Link>
@@ -60,7 +59,7 @@ export const Navbar: React.FC = () => {
           <LanguageSwitcher />
           <a
             href={`https://wa.me/${CONFIG.contact.whatsapp}`}
-            className="hidden sm:flex items-center gap-2 bg-[#16C60C] text-white px-6 py-3 rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-white hover:text-black transition-all shadow-lg shadow-[#16C60C]/20"
+            className="hidden sm:flex items-center gap-2 bg-[#D4AF37] text-white px-6 py-3 rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-white hover:text-black transition-all shadow-lg shadow-[#D4AF37]/20"
           >
             <MessageSquare size={14} className="fill-current" /> {i18n.t('nav.whatsapp')}
           </a>
@@ -108,7 +107,7 @@ export const Navbar: React.FC = () => {
               ))}
               <a
                 href={`https://wa.me/${CONFIG.contact.whatsapp}`}
-                className="flex items-center justify-center gap-2 bg-[#16C60C] text-white w-full py-5 rounded-2xl font-black uppercase tracking-widest mt-4"
+                className="flex items-center justify-center gap-2 bg-[#D4AF37] text-white w-full py-5 rounded-2xl font-black uppercase tracking-widest mt-4"
               >
                 {i18n.t('nav.whatsapp')}
               </a>

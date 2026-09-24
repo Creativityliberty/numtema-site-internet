@@ -61,7 +61,7 @@ export const ThreeDMarquee = ({
                       }}
                       src={image}
                       alt={`Showcase ${imageIndex + 1}`}
-                      className="aspect-[970/700] rounded-2xl object-cover ring-1 ring-white/10 hover:ring-[#16C60C]/50 shadow-2xl transition-all duration-500 cursor-pointer"
+                      className="aspect-[970/700] rounded-2xl object-cover ring-1 ring-white/10 hover:ring-[#D4AF37]/50 shadow-2xl transition-all duration-500 cursor-pointer"
                       width={970}
                       height={700}
                     />
@@ -91,7 +91,7 @@ const GridLineHorizontal = ({
       style={
         {
           "--background": "#050508",
-          "--color": "#16C60C",
+          "--color": "#D4AF37",
           "--height": "1px",
           "--width": "5px",
           "--fade-stop": "90%",
@@ -124,7 +124,7 @@ const GridLineVertical = ({
       style={
         {
           "--background": "#050508",
-          "--color": "#16C60C",
+          "--color": "#D4AF37",
           "--height": "5px",
           "--width": "1px",
           "--fade-stop": "90%",

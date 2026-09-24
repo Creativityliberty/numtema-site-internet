@@ -13,20 +13,20 @@ export const Footer: React.FC = () => {
                   <Link to="/" className="flex items-center gap-4 mb-6">
                      <img src={CONFIG.brand.logoUrl} alt="Logo" className="w-12 h-12 object-contain rounded-full border border-white/10" />
                      <span className="text-3xl font-black tracking-tighter uppercase block">
-                        {CONFIG.brand.name}<span className="text-[#16C60C]">{CONFIG.brand.suffix}</span>
+                        {CONFIG.brand.name}<span className="text-[#D4AF37]">{CONFIG.brand.suffix}</span>
                      </span>
                   </Link>
                   <p className="text-sm text-white/60 leading-relaxed">
                      {i18n.t('footer.description')}
                   </p>
                   <div className="flex gap-6">
-                     <a href={CONFIG.socials.youtube} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-xl glass border-white/10 flex items-center justify-center text-white hover:bg-[#16C60C] hover:text-white transition-all">
+                     <a href={CONFIG.socials.youtube} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-xl glass border-white/10 flex items-center justify-center text-white hover:bg-[#D4AF37] hover:text-white transition-all">
                         <Youtube size={20} />
                      </a>
-                     <a href={CONFIG.socials.instagram} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-xl glass border-white/10 flex items-center justify-center text-white hover:bg-[#16C60C] hover:text-white transition-all">
+                     <a href={CONFIG.socials.instagram} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-xl glass border-white/10 flex items-center justify-center text-white hover:bg-[#D4AF37] hover:text-white transition-all">
                         <Instagram size={20} />
                      </a>
-                     <a href={CONFIG.socials.github} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-xl glass border-white/10 flex items-center justify-center text-white hover:bg-[#16C60C] hover:text-white transition-all">
+                     <a href={CONFIG.socials.github} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-xl glass border-white/10 flex items-center justify-center text-white hover:bg-[#D4AF37] hover:text-white transition-all">
                         <Github size={20} />
                      </a>
                   </div>
@@ -35,20 +35,20 @@ export const Footer: React.FC = () => {
                <div>
                   <h4 className="font-black uppercase tracking-widest text-xs mb-6">{i18n.t('footer.navTitle')}</h4>
                   <div className="flex flex-col gap-4 text-sm font-bold text-white/60">
-                     <Link to="/" className="text-sm text-white/60 hover:text-[#16C60C] transition-all">{i18n.t('footer.home')}</Link>
-                     <Link to="/a-propos" className="text-sm text-white/60 hover:text-[#16C60C] transition-all">{i18n.t('footer.about')}</Link>
-                     <Link to="/realisations" className="text-sm text-white/60 hover:text-[#16C60C] transition-all">{i18n.t('footer.portfolio')}</Link>
-                     <Link to="/formations" className="text-sm text-white/60 hover:text-[#16C60C] transition-all">{i18n.t('footer.formations')}</Link>
-                     <Link to="/contact" className="text-sm text-white/60 hover:text-[#16C60C] transition-all">{i18n.t('footer.contact')}</Link>
+                     <Link to="/" className="text-sm text-white/60 hover:text-[#D4AF37] transition-all">{i18n.t('footer.home')}</Link>
+                     <Link to="/a-propos" className="text-sm text-white/60 hover:text-[#D4AF37] transition-all">{i18n.t('footer.about')}</Link>
+                     <Link to="/realisations" className="text-sm text-white/60 hover:text-[#D4AF37] transition-all">{i18n.t('footer.portfolio')}</Link>
+                     <Link to="/formations" className="text-sm text-white/60 hover:text-[#D4AF37] transition-all">{i18n.t('footer.formations')}</Link>
+                     <Link to="/contact" className="text-sm text-white/60 hover:text-[#D4AF37] transition-all">{i18n.t('footer.contact')}</Link>
                   </div>
                </div>
 
                <div>
                   <h4 className="font-black uppercase tracking-widest text-xs mb-6">{i18n.t('footer.legalTitle')}</h4>
                   <div className="flex flex-col gap-4 text-sm font-bold text-white/60">
-                     <Link to="/mentions-legales" className="text-sm text-white/60 hover:text-[#16C60C] transition-all">{i18n.t('footer.legal')}</Link>
-                     <Link to="/cgv" className="text-sm text-white/60 hover:text-[#16C60C] transition-all">{i18n.t('footer.cgv')}</Link>
-                     <Link to="/confidentialite" className="text-sm text-white/60 hover:text-[#16C60C] transition-all">{i18n.t('footer.privacy')}</Link>
+                     <Link to="/mentions-legales" className="text-sm text-white/60 hover:text-[#D4AF37] transition-all">{i18n.t('footer.legal')}</Link>
+                     <Link to="/cgv" className="text-sm text-white/60 hover:text-[#D4AF37] transition-all">{i18n.t('footer.cgv')}</Link>
+                     <Link to="/confidentialite" className="text-sm text-white/60 hover:text-[#D4AF37] transition-all">{i18n.t('footer.privacy')}</Link>
                   </div>
                </div>
             </div>
